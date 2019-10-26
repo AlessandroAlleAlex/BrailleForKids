@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C555CEBC23640604009973FD /* PianoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555CEBB23640604009973FD /* PianoViewController.swift */; };
+		C555CEC12364EBF0009973FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C555CEC02364EBF0009973FD /* AVFoundation.framework */; };
+		C555CEC32364FA6B009973FD /* piano in Resources */ = {isa = PBXBuildFile; fileRef = C555CEC22364FA6B009973FD /* piano */; };
 		D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B52F2363F52000262BA9 /* AppDelegate.swift */; };
 		D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5312363F52000262BA9 /* SceneDelegate.swift */; };
 		D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5332363F52000262BA9 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		C555CEBB23640604009973FD /* PianoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoViewController.swift; sourceTree = "<group>"; };
+		C555CEC02364EBF0009973FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C555CEC22364FA6B009973FD /* piano */ = {isa = PBXFileReference; lastKnownFileType = folder; name = piano; path = ../../../../piano; sourceTree = "<group>"; };
 		D2B3B52C2363F52000262BA9 /* BrailleForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B52F2363F52000262BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B3B5312363F52000262BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C555CEC12364EBF0009973FD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C555CEBF2364EBEF009973FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C555CEC02364EBF0009973FD /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D2B3B5232363F52000262BA9 = {
 			isa = PBXGroup;
 			children = (
 				D2B3B52E2363F52000262BA9 /* BrailleForKids */,
 				D2B3B52D2363F52000262BA9 /* Products */,
+				C555CEBF2364EBEF009973FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +81,7 @@
 				D2B3B5352363F52000262BA9 /* Main.storyboard */,
 				C555CEBB23640604009973FD /* PianoViewController.swift */,
 				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
+				C555CEC22364FA6B009973FD /* piano */,
 				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
 				D2B3B53D2363F52200262BA9 /* Info.plist */,
 			);
@@ -131,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C555CEC32364FA6B009973FD /* piano in Resources */,
 				D2B3B53C2363F52200262BA9 /* LaunchScreen.storyboard in Resources */,
 				D2B3B5392363F52200262BA9 /* Assets.xcassets in Resources */,
 				D2B3B5372363F52000262BA9 /* Main.storyboard in Resources */,
@@ -293,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H53HY9PQV;
 				INFOPLIST_FILE = BrailleForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H53HY9PQV;
 				INFOPLIST_FILE = BrailleForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
