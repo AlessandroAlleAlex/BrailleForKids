@@ -16,6 +16,26 @@ class LearnVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btn1() {
+        print("btn1")
+    }
+    @IBAction func btn2() {
+        print("btn2")
+    }
+    @IBAction func btn3() {
+        print("btn3")
+    }
+    @IBAction func btn4() {
+        print("btn4")
+    }
+    @IBAction func btn5() {
+        print("btn5")
+    }
+    @IBAction func btn6() {
+        print("btn6")
+    }
+    
+    
 
     /*
     // MARK: - Navigation
