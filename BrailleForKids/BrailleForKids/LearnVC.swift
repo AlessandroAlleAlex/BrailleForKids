@@ -46,7 +46,7 @@ class LearnVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         randChar()
-        print(print(brailleAlphabet[learnCharCode] ?? "error in playing audio"), "*************")
+        print(brailleAlphabet[learnCharCode] ?? "error in playing audio", "*************")
         // Do any additional setup after loading the view.
     }
     
