@@ -28,9 +28,10 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     var audioPlayer : AVAudioPlayer?
+    var audioPlayer2 : AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let soundURL = Bundle.main.path(forResource: "a3", ofType: "mp3"){
+        if let soundURL = Bundle.main.path(forResource: "c3", ofType: "mp3"){
             let url = NSURL.fileURL(withPath: soundURL)
             do{
                 try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
@@ -38,6 +39,14 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
                                  print("there was some error.")
                     }
         }
+        if let soundURL2 = Bundle.main.path(forResource: "d3", ofType: "mp3"){
+                  let url2 = NSURL.fileURL(withPath: soundURL2)
+                  do{
+                      try audioPlayer2 = AVAudioPlayer(contentsOf: url2 as URL)
+                          }catch {
+                                       print("there was some error.")
+                          }
+              }
     }
     func vibrate() {
         AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate) {
@@ -51,26 +60,26 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func d3B(_ sender: Any) {
-         vibrate()
-        
+         //vibrate()
+        audioPlayer2?.play()
     }
     
     
     @IBAction func e4C(_ sender: Any) {
-         vibrate()
-        
+         //vibrate()
+        audioPlayer?.play()
     }
     @IBAction func f3D(_ sender: Any) {
-         vibrate()
-        
+         //vibrate()
+        audioPlayer?.play()
     }
     @IBAction func g3E(_ sender: Any) {
-         vibrate()
-        
+         //vibrate()
+        audioPlayer?.play()
     }
     @IBAction func a3F(_ sender: Any) {
-         vibrate()
-        
+         //vibrate()
+        audioPlayer?.play()
     }
     @IBAction func h3G(_ sender: Any) {
          vibrate()

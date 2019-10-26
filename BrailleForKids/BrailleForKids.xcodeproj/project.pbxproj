@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C502A3AF23650243001D80F1 /* cis4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3A523650242001D80F1 /* cis4.mp3 */; };
+		C502A3B023650243001D80F1 /* c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3A623650243001D80F1 /* c4.mp3 */; };
+		C502A3B123650243001D80F1 /* c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3A723650243001D80F1 /* c3.mp3 */; };
+		C502A3B223650243001D80F1 /* e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3A823650243001D80F1 /* e3.mp3 */; };
+		C502A3B323650243001D80F1 /* dis3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3A923650243001D80F1 /* dis3.mp3 */; };
+		C502A3B423650243001D80F1 /* f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3AA23650243001D80F1 /* f3.mp3 */; };
+		C502A3B523650243001D80F1 /* cis3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3AB23650243001D80F1 /* cis3.mp3 */; };
+		C502A3B623650243001D80F1 /* as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3AC23650243001D80F1 /* as3.mp3 */; };
+		C502A3B723650243001D80F1 /* d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3AD23650243001D80F1 /* d3.mp3 */; };
+		C502A3B823650243001D80F1 /* a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C502A3AE23650243001D80F1 /* a3.mp3 */; };
 		C555CEBC23640604009973FD /* PianoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555CEBB23640604009973FD /* PianoViewController.swift */; };
 		C555CEC12364EBF0009973FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C555CEC02364EBF0009973FD /* AVFoundation.framework */; };
-		C555CEC32364FA6B009973FD /* piano in Resources */ = {isa = PBXBuildFile; fileRef = C555CEC22364FA6B009973FD /* piano */; };
 		D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B52F2363F52000262BA9 /* AppDelegate.swift */; };
 		D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5312363F52000262BA9 /* SceneDelegate.swift */; };
 		D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5332363F52000262BA9 /* ViewController.swift */; };
@@ -20,9 +29,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C502A3A523650242001D80F1 /* cis4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cis4.mp3; sourceTree = "<group>"; };
+		C502A3A623650243001D80F1 /* c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c4.mp3; sourceTree = "<group>"; };
+		C502A3A723650243001D80F1 /* c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c3.mp3; sourceTree = "<group>"; };
+		C502A3A823650243001D80F1 /* e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e3.mp3; sourceTree = "<group>"; };
+		C502A3A923650243001D80F1 /* dis3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dis3.mp3; sourceTree = "<group>"; };
+		C502A3AA23650243001D80F1 /* f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f3.mp3; sourceTree = "<group>"; };
+		C502A3AB23650243001D80F1 /* cis3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cis3.mp3; sourceTree = "<group>"; };
+		C502A3AC23650243001D80F1 /* as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = as3.mp3; sourceTree = "<group>"; };
+		C502A3AD23650243001D80F1 /* d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = d3.mp3; sourceTree = "<group>"; };
+		C502A3AE23650243001D80F1 /* a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a3.mp3; sourceTree = "<group>"; };
 		C555CEBB23640604009973FD /* PianoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoViewController.swift; sourceTree = "<group>"; };
 		C555CEC02364EBF0009973FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		C555CEC22364FA6B009973FD /* piano */ = {isa = PBXFileReference; lastKnownFileType = folder; name = piano; path = ../../../../piano; sourceTree = "<group>"; };
 		D2B3B52C2363F52000262BA9 /* BrailleForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B52F2363F52000262BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B3B5312363F52000262BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +92,16 @@
 		D2B3B52E2363F52000262BA9 /* BrailleForKids */ = {
 			isa = PBXGroup;
 			children = (
+				C502A3AE23650243001D80F1 /* a3.mp3 */,
+				C502A3AC23650243001D80F1 /* as3.mp3 */,
+				C502A3A723650243001D80F1 /* c3.mp3 */,
+				C502A3A623650243001D80F1 /* c4.mp3 */,
+				C502A3AB23650243001D80F1 /* cis3.mp3 */,
+				C502A3A523650242001D80F1 /* cis4.mp3 */,
+				C502A3AD23650243001D80F1 /* d3.mp3 */,
+				C502A3A923650243001D80F1 /* dis3.mp3 */,
+				C502A3A823650243001D80F1 /* e3.mp3 */,
+				C502A3AA23650243001D80F1 /* f3.mp3 */,
 				D2B3B52F2363F52000262BA9 /* AppDelegate.swift */,
 				D2B3B5312363F52000262BA9 /* SceneDelegate.swift */,
 				D2B3B5332363F52000262BA9 /* ViewController.swift */,
@@ -81,7 +109,6 @@
 				D2B3B5352363F52000262BA9 /* Main.storyboard */,
 				C555CEBB23640604009973FD /* PianoViewController.swift */,
 				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
-				C555CEC22364FA6B009973FD /* piano */,
 				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
 				D2B3B53D2363F52200262BA9 /* Info.plist */,
 			);
@@ -146,10 +173,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C555CEC32364FA6B009973FD /* piano in Resources */,
+				C502A3B823650243001D80F1 /* a3.mp3 in Resources */,
+				C502A3B223650243001D80F1 /* e3.mp3 in Resources */,
+				C502A3B323650243001D80F1 /* dis3.mp3 in Resources */,
+				C502A3B023650243001D80F1 /* c4.mp3 in Resources */,
 				D2B3B53C2363F52200262BA9 /* LaunchScreen.storyboard in Resources */,
+				C502A3AF23650243001D80F1 /* cis4.mp3 in Resources */,
 				D2B3B5392363F52200262BA9 /* Assets.xcassets in Resources */,
+				C502A3B523650243001D80F1 /* cis3.mp3 in Resources */,
+				C502A3B623650243001D80F1 /* as3.mp3 in Resources */,
+				C502A3B123650243001D80F1 /* c3.mp3 in Resources */,
+				C502A3B423650243001D80F1 /* f3.mp3 in Resources */,
 				D2B3B5372363F52000262BA9 /* Main.storyboard in Resources */,
+				C502A3B723650243001D80F1 /* d3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
