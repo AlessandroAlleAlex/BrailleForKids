@@ -344,59 +344,96 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmS-2U-7K2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmS-2U-7K2">
                                 <rect key="frame" x="60" y="201" width="95" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="YB1-ZA-rJR"/>
+                                    <constraint firstAttribute="height" constant="168" id="x5N-0r-pvu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3M-KU-Wq3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3M-KU-Wq3">
                                 <rect key="frame" x="174" y="201" width="95" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="ViP-Cu-XB6"/>
+                                    <constraint firstAttribute="width" constant="95" id="ZvY-C9-G45"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERm-WN-UXD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERm-WN-UXD">
                                 <rect key="frame" x="287" y="201" width="95" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="5I6-bK-UY0"/>
+                                    <constraint firstAttribute="height" constant="168" id="e4P-0Y-BM5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpH-4U-lIB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpH-4U-lIB">
                                 <rect key="frame" x="515" y="201" width="95" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="9eE-mi-kgU"/>
+                                    <constraint firstAttribute="width" constant="95" id="AE7-81-SaA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="4"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIj-9B-Xj0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIj-9B-Xj0">
                                 <rect key="frame" x="628" y="201" width="95" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="Mas-NR-703"/>
+                                    <constraint firstAttribute="width" constant="95" id="bSY-Si-FYB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="5"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od8-lR-MXW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od8-lR-MXW">
                                 <rect key="frame" x="741" y="201" width="95" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="BJ9-oU-aAk"/>
+                                    <constraint firstAttribute="width" constant="95" id="SqE-O8-o0q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="6"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ky-tl-A0n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ky-tl-A0n">
                                 <rect key="frame" x="390" y="288" width="117" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="aET-U5-ssl"/>
+                                    <constraint firstAttribute="width" constant="117" id="yxB-E0-bHL"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BpH-4U-lIB" firstAttribute="leading" secondItem="7ky-tl-A0n" secondAttribute="trailing" constant="8" id="32n-fC-Lxf"/>
+                            <constraint firstItem="86e-QS-hu7" firstAttribute="trailing" secondItem="Od8-lR-MXW" secondAttribute="trailing" constant="16" id="8NW-ED-p0z"/>
+                            <constraint firstItem="ERm-WN-UXD" firstAttribute="baseline" secondItem="BpH-4U-lIB" secondAttribute="baseline" id="8yw-F0-2bW"/>
+                            <constraint firstItem="Od8-lR-MXW" firstAttribute="top" secondItem="Utb-Gs-an2" secondAttribute="bottom" constant="61" id="BqJ-ql-GHb"/>
+                            <constraint firstItem="b3M-KU-Wq3" firstAttribute="leading" secondItem="PmS-2U-7K2" secondAttribute="trailing" constant="19" id="FL4-bI-Vq0"/>
+                            <constraint firstItem="ERm-WN-UXD" firstAttribute="baseline" secondItem="PmS-2U-7K2" secondAttribute="baseline" id="HLy-Uy-oae"/>
+                            <constraint firstItem="ERm-WN-UXD" firstAttribute="leading" secondItem="b3M-KU-Wq3" secondAttribute="trailing" constant="18" id="Lb4-j2-aGY"/>
+                            <constraint firstItem="Od8-lR-MXW" firstAttribute="leading" secondItem="HIj-9B-Xj0" secondAttribute="trailing" constant="18" id="Pz3-tW-xcX"/>
+                            <constraint firstItem="PmS-2U-7K2" firstAttribute="top" secondItem="Utb-Gs-an2" secondAttribute="bottom" constant="61" id="Shn-su-NHt"/>
                             <constraint firstItem="86e-QS-hu7" firstAttribute="trailing" secondItem="Utb-Gs-an2" secondAttribute="trailing" constant="16" id="XLM-8b-JVI"/>
                             <constraint firstItem="Utb-Gs-an2" firstAttribute="top" secondItem="86e-QS-hu7" secondAttribute="top" constant="38" id="bJv-6f-TZV"/>
+                            <constraint firstItem="7ky-tl-A0n" firstAttribute="top" secondItem="Utb-Gs-an2" secondAttribute="bottom" constant="148" id="bgo-ke-eNP"/>
+                            <constraint firstItem="7ky-tl-A0n" firstAttribute="leading" secondItem="ERm-WN-UXD" secondAttribute="trailing" constant="8" id="cwW-so-3Rl"/>
+                            <constraint firstItem="ERm-WN-UXD" firstAttribute="baseline" secondItem="7ky-tl-A0n" secondAttribute="firstBaseline" id="g49-c4-Xwk"/>
+                            <constraint firstItem="86e-QS-hu7" firstAttribute="bottom" secondItem="7ky-tl-A0n" secondAttribute="bottom" constant="24" id="jNQ-jC-cia"/>
+                            <constraint firstItem="ERm-WN-UXD" firstAttribute="baseline" secondItem="b3M-KU-Wq3" secondAttribute="baseline" id="l04-pW-nEX"/>
+                            <constraint firstItem="PmS-2U-7K2" firstAttribute="leading" secondItem="86e-QS-hu7" secondAttribute="leading" constant="16" id="py2-sH-B9G"/>
+                            <constraint firstItem="ERm-WN-UXD" firstAttribute="baseline" secondItem="HIj-9B-Xj0" secondAttribute="baseline" id="xGe-no-gN5"/>
                             <constraint firstItem="Utb-Gs-an2" firstAttribute="leading" secondItem="86e-QS-hu7" secondAttribute="leading" constant="16" id="xSV-16-7ds"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="86e-QS-hu7"/>

@@ -10,17 +10,43 @@ import UIKit
 import AVFoundation
 
 class TextVC: UIViewController {
+    
+    
+    
     var player: AVAudioPlayer? // make sure you declare in such way!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadAudioA()
+        //loadAudioA()
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func touchPlay(_ sender: Any) {
         player?.play()
     }
-    
+
     func loadAudioA() {
         if let audioPath = Bundle.main.path(forResource: "alphabetA", ofType: "mp3"){
             let url = NSURL.fileURL(withPath: audioPath)
