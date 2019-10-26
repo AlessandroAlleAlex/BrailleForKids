@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C555CEBC23640604009973FD /* PianoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555CEBB23640604009973FD /* PianoViewController.swift */; };
 		D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B52F2363F52000262BA9 /* AppDelegate.swift */; };
 		D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5312363F52000262BA9 /* SceneDelegate.swift */; };
 		D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5332363F52000262BA9 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C555CEBB23640604009973FD /* PianoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoViewController.swift; sourceTree = "<group>"; };
 		D2B3B52C2363F52000262BA9 /* BrailleForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B52F2363F52000262BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B3B5312363F52000262BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D2B3B5332363F52000262BA9 /* ViewController.swift */,
 				D2B3B5432363FA7500262BA9 /* LearnVC.swift */,
 				D2B3B5352363F52000262BA9 /* Main.storyboard */,
+				C555CEBB23640604009973FD /* PianoViewController.swift */,
 				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
 				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
 				D2B3B53D2363F52200262BA9 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */,
+				C555CEBC23640604009973FD /* PianoViewController.swift in Sources */,
 				D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */,
 				D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */,
 				D2B3B5442363FA7500262BA9 /* LearnVC.swift in Sources */,
