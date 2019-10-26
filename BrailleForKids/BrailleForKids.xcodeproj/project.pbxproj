@@ -13,6 +13,7 @@
 		D2B3B5372363F52000262BA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B3B5352363F52000262BA9 /* Main.storyboard */; };
 		D2B3B5392363F52200262BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B3B5382363F52200262BA9 /* Assets.xcassets */; };
 		D2B3B53C2363F52200262BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */; };
+		D2B3B5442363FA7500262BA9 /* LearnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5432363FA7500262BA9 /* LearnVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D2B3B5382363F52200262BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B3B53B2363F52200262BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2B3B53D2363F52200262BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B3B5432363FA7500262BA9 /* LearnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D2B3B52F2363F52000262BA9 /* AppDelegate.swift */,
 				D2B3B5312363F52000262BA9 /* SceneDelegate.swift */,
 				D2B3B5332363F52000262BA9 /* ViewController.swift */,
+				D2B3B5432363FA7500262BA9 /* LearnVC.swift */,
 				D2B3B5352363F52000262BA9 /* Main.storyboard */,
 				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
 				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */,
 				D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */,
 				D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */,
+				D2B3B5442363FA7500262BA9 /* LearnVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
