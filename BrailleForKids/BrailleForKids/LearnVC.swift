@@ -155,6 +155,8 @@ class LearnVC: UIViewController {
         if myset.count == 6 {
             // play audio here
             print(brailleAlphabet[learnCharCode] ?? "error in playing audio")
+            loadAudio(learningChar: brailleAlphabet[learnCharCode]!)
+            audioPlayer?.play()
             // initialize another learn character
             randChar()
             // reset the buttons counter
