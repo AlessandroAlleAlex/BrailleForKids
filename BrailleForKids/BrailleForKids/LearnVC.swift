@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
 
 class LearnVC: UIViewController {
     
@@ -20,11 +21,10 @@ class LearnVC: UIViewController {
     
     
     
+    var audioPlayer: AVAudioPlayer?
     var myset: Set<Int> = []
     var learnCharCode: String = ""
     let brailleAlphabet: [String: Character] = [
-        
-    
         "100000": "a",
         "110000": "b",
         "100100": "c",
@@ -52,7 +52,36 @@ class LearnVC: UIViewController {
         "101111": "y",
         "101011": "z"
     ]
-
+    
+    var audioList: [Character: String] = [
+        "a": "alphabetA",
+        "b": "alphabetB",
+        "c": "alphabetC",
+        "d": "alphabetD",
+        "e": "alphabetE",
+        "f": "alphabetF",
+        "g": "alphabetG",
+        "h": "alphabetH",
+        "i": "alphabetI",
+        "j": "alphabetJ",
+        "k": "alphabetK",
+        "l": "alphabetL",
+        "m": "alphabetM",
+        "n": "alphabetN",
+        "o": "alphabetO",
+        "p": "alphabetP",
+        "q": "alphabetQ",
+        "r": "alphabetR",
+        "s": "alphabetS",
+        "t": "alphabetT",
+        "u": "alphabetU",
+        "v": "alphabetV",
+        "w": "alphabetW",
+        "x": "alphabetX",
+        "y": "alphabetY",
+        "z": "alphabetZ"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         randChar()
@@ -189,6 +218,8 @@ class LearnVC: UIViewController {
         if myset.count == 6 {
             // play audio here
             print(brailleAlphabet[learnCharCode] ?? "error in playing audio")
+            loadAudio(learningChar: brailleAlphabet[learnCharCode]!)
+            audioPlayer?.play()
             // initialize another learn character
             randChar()
             // reset the buttons counter
@@ -196,4 +227,18 @@ class LearnVC: UIViewController {
         }
     }
 
+    func loadAudio(learningChar: Character) {
+        if let audioPath = Bundle.main.path(forResource: audioList[learningChar], ofType: "mp3") {
+            let url = NSURL.fileURL(withPath: audioPath)
+            do {
+                try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
+            } catch {
+                print("Player not available")
+            }
+        }
+    }
+    
+    // you just call two thinhs:
+    // loadAudio("c") ("c" is the learning charater)
+    // audioplayer?.play()
 }
