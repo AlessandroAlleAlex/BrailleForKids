@@ -19,8 +19,6 @@ class LearnVC: UIViewController {
     @IBOutlet weak var OB5: UIButton!
     @IBOutlet weak var OB6: UIButton!
     
-    
-    
     var audioPlayer: AVAudioPlayer?
     var myset: Set<Int> = []
     var learnCharCode: String = ""
