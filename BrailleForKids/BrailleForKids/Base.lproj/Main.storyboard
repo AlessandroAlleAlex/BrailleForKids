@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A3Y-LK-7Dc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mGW-Gk-7n5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -107,9 +107,44 @@
                     <view key="view" contentMode="scaleToFill" id="hNg-jp-vCH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiY-e6-R4K">
+                                <rect key="frame" x="138.5" y="425" width="137" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Start / Stop"/>
+                                <connections>
+                                    <action selector="startStopBtn" destination="mGW-Gk-7n5" eventType="touchUpInside" id="FIc-yq-6eX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say something..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHT-Iv-hYl">
+                                <rect key="frame" x="0.0" y="110" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Recognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVA-ra-CIv">
+                                <rect key="frame" x="0.0" y="54" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pHT-Iv-hYl" firstAttribute="top" secondItem="KVA-ra-CIv" secondAttribute="bottom" constant="20" id="MUI-Uu-la3"/>
+                            <constraint firstItem="hLZ-xq-Fhg" firstAttribute="trailing" secondItem="KVA-ra-CIv" secondAttribute="trailing" id="O38-jY-FFc"/>
+                            <constraint firstItem="jiY-e6-R4K" firstAttribute="centerY" secondItem="hNg-jp-vCH" secondAttribute="centerY" id="W0V-Yi-gUh"/>
+                            <constraint firstItem="KVA-ra-CIv" firstAttribute="top" secondItem="hLZ-xq-Fhg" secondAttribute="top" constant="10" id="ch0-vv-pBR"/>
+                            <constraint firstItem="jiY-e6-R4K" firstAttribute="centerX" secondItem="hNg-jp-vCH" secondAttribute="centerX" id="d2K-eu-dIW"/>
+                            <constraint firstItem="hLZ-xq-Fhg" firstAttribute="trailing" secondItem="pHT-Iv-hYl" secondAttribute="trailing" id="fC1-lJ-1vw"/>
+                            <constraint firstItem="KVA-ra-CIv" firstAttribute="leading" secondItem="hLZ-xq-Fhg" secondAttribute="leading" id="lKc-bn-a18"/>
+                            <constraint firstItem="pHT-Iv-hYl" firstAttribute="leading" secondItem="hLZ-xq-Fhg" secondAttribute="leading" id="sbb-CI-lYz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hLZ-xq-Fhg"/>
                     </view>
+                    <connections>
+                        <outlet property="transcribeLabel" destination="pHT-Iv-hYl" id="rGF-oc-1Wp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U93-E7-iHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
