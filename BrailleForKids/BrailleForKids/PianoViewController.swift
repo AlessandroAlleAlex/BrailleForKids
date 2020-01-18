@@ -11,7 +11,6 @@ import AVFoundation
 class PianoViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var a: UIButton!
-    
     @IBOutlet weak var b: UIButton!
     @IBOutlet weak var c: UIButton!
     @IBOutlet weak var d: UIButton!
@@ -164,51 +163,47 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    @IBAction func m1(_ sender: Any) {
+    @IBAction func v1(_ sender: Any) {
         audioPlayer?.play()
     }
-    @IBAction func n1(_ sender: Any) {
+    @IBAction func v2(_ sender: Any) {
         audioPlayer2?.play()
     }
-    
-    @IBAction func n2(_ sender: Any) {
+    @IBAction func v3(_ sender: Any) {
         audioPlayer3?.play()
     }
-    
-    @IBAction func n3(_ sender: Any) {
+    @IBAction func v4(_ sender: Any) {
         audioPlayer4?.play()
     }
-    @IBAction func n4(_ sender: Any) {
+    @IBAction func v5(_ sender: Any) {
         audioPlayer5?.play()
     }
-    
-    @IBAction func n5(_ sender: Any) {
+    @IBAction func v6(_ sender: Any) {
         audioPlayer6?.play()
     }
-    @IBAction func n6(_ sender: Any) {
+    @IBAction func v7(_ sender: Any) {
         audioPlayer7?.play()
     }
     
-    @IBAction func n7(_ sender: Any) {
+    @IBAction func v8(_ sender: Any) {
         audioPlayer8?.play()
     }
-    @IBAction func n8(_ sender: Any) {
+    @IBAction func c1(_ sender: Any) {
         audioPlayer9?.play()
     }
-    
-    @IBAction func n9(_ sender: Any) {
+    @IBAction func c2(_ sender: Any) {
         audioPlayer10?.play()
     }
-    @IBAction func n10(_ sender: Any) {
+    @IBAction func c3(_ sender: Any) {
         audioPlayer11?.play()
     }
-    @IBAction func n11(_ sender: Any) {
+    @IBAction func c4(_ sender: Any) {
         audioPlayer12?.play()
     }
-    @IBAction func n12(_ sender: Any) {
+    @IBAction func c5(_ sender: Any) {
         audioPlayer13?.play()
     }
-    @IBAction func n13(_ sender: Any) {
+    @IBAction func c6(_ sender: Any) {
         audioPlayer14?.play()
     }
     
