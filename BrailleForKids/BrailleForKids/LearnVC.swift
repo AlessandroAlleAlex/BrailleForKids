@@ -21,90 +21,28 @@ class LearnVC: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
     var myset: Set<Int> = []
-    var learnCharCode: String = ""
-    let brailleAlphabet: [String: Character] = [
-        "100000": "a",
-        "110000": "b",
-        "100100": "c",
-        "100110": "d",
-        "100010": "e",
-        "110100": "f",
-        "110110": "g",
-        "110010": "h",
-        "010100": "i",
-        "010110": "j",
-        "101000": "k",
-        "111000": "l",
-        "101100": "m",
-        "101110": "n",
-        "101010": "o",
-        "111100": "p",
-        "111110": "q",
-        "111010": "r",
-        "011100": "s",
-        "011110": "t",
-        "101001": "u",
-        "111001": "v",
-        "010111": "w",
-        "101101": "x",
-        "101111": "y",
-        "101011": "z"
-    ]
-    
-    var audioList: [Character: String] = [
-        "a": "alphabetA",
-        "b": "alphabetB",
-        "c": "alphabetC",
-        "d": "alphabetD",
-        "e": "alphabetE",
-        "f": "alphabetF",
-        "g": "alphabetG",
-        "h": "alphabetH",
-        "i": "alphabetI",
-        "j": "alphabetJ",
-        "k": "alphabetK",
-        "l": "alphabetL",
-        "m": "alphabetM",
-        "n": "alphabetN",
-        "o": "alphabetO",
-        "p": "alphabetP",
-        "q": "alphabetQ",
-        "r": "alphabetR",
-        "s": "alphabetS",
-        "t": "alphabetT",
-        "u": "alphabetU",
-        "v": "alphabetV",
-        "w": "alphabetW",
-        "x": "alphabetX",
-        "y": "alphabetY",
-        "z": "alphabetZ"
-    ]
+    var learningChar: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         randChar()
-        print(brailleAlphabet[learnCharCode] ?? "error in playing audio", "*************")
-        
-        
-        
-        // Do any additional setup after loading the view.
+        print(Alphabet.code[learningChar] ?? "error in playing audio", "*************")
     }
 
-    @IBAction func newB1() {
-        let vibrateVal = ["100000","110000","100100","100110","100010","110100","110110","110010","101000","111000","101100","101110","101010","111100","111110","111010","101001","111001","101101","101111","101011"]
-        if vibrateVal.contains(learnCharCode) {
-            // vibrate device
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    @IBAction func touchCell1() {
+        let vibrateVal = VibrateCode.set1
+        if vibrateVal.contains(learningChar) {
+            UIDevice.vibrate()
         }
         myset.insert(1)
         print("btn1")
         checkAlphabet()
     }
-    @IBAction func newB2() {
-        let vibrateVal = ["100100","100110","110100","110110","010100","010110","101100","101110","111100","111110","011100","011110","010111","101101","101111"]
-        if vibrateVal.contains(learnCharCode) {
-            // vibrate device
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    
+    @IBAction func touchCell2() {
+        let vibrateVal = VibrateCode.set2
+        if vibrateVal.contains(learningChar) {
+            UIDevice.vibrate()
         }
         
         myset.insert(2)
@@ -112,44 +50,40 @@ class LearnVC: UIViewController {
         
         checkAlphabet()
     }
-    @IBAction func newB3() {
-        let vibrateVal = ["110000","110100","110110","110010","010100","010110","111000","111100","111110","111010","011100","011110","111001","010111"]
-        if vibrateVal.contains(learnCharCode) {
-            // vibrate device
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    @IBAction func touchCell3() {
+        let vibrateVal = VibrateCode.set3
+        if vibrateVal.contains(learningChar) {
+            UIDevice.vibrate()
         }
         myset.insert(3)
         print("btn3")
         checkAlphabet()
     }
     
-    @IBAction func newB4() {
-        let vibrateVal = ["100110","100010","110110","110010","010110","101110","101010","111110","111010","011110","010111","101111","101011"]
-        if vibrateVal.contains(learnCharCode) {
-            // vibrate device
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    @IBAction func touchCell4() {
+        let vibrateVal = VibrateCode.set4
+        if vibrateVal.contains(learningChar) {
+            UIDevice.vibrate()
         }
         myset.insert(4)
         print("btn4")
         checkAlphabet()
     }
     
-    @IBAction func newB5() {
-        let vibrateVal = ["101000","111000","101100","101110","101010","111100","111110","111010","011100","011110","101001","111001","010111","101101","101111","101011"]
-        if vibrateVal.contains(learnCharCode) {
-            // vibrate device
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    @IBAction func touchCell5() {
+        let vibrateVal = VibrateCode.set5
+        if vibrateVal.contains(learningChar) {
+            UIDevice.vibrate()
         }
         myset.insert(5)
         print("btn5")
         checkAlphabet()
     }
     
-    @IBAction func newB6() {
-        let vibrateVal = ["101001", "111001", "010111", "101101", "101111", "101011"]
-        if vibrateVal.contains(learnCharCode) {
-            // vibrate device
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    @IBAction func touchCell6() {
+        let vibrateVal = VibrateCode.set6
+        if vibrateVal.contains(learningChar) {
+            UIDevice.vibrate()
         }
         myset.insert(6)
         print("btn6")
@@ -157,52 +91,54 @@ class LearnVC: UIViewController {
     }
     
     func randChar() {
-        let index: Int = Int(arc4random_uniform(UInt32(brailleAlphabet.count)))
-        self.learnCharCode = Array(brailleAlphabet.keys)[index]
-        let b1 = ["100000","110000","100100","100110","100010","110100","110110","110010","101000","111000","101100","101110","101010","111100","111110","111010","101001","111001","101101","101111","101011"]
-        let b2 = ["100100","100110","110100","110110","010100","010110","101100","101110","111100","111110","011100","011110","010111","101101","101111"]
-        let b3 = ["110000","110100","110110","110010","010100","010110","111000","111100","111110","111010","011100","011110","111001","010111"]
-        let b4 = ["100110","100010","110110","110010","010110","101110","101010","111110","111010","011110","010111","101111","101011"]
-        let b5 = ["101000","111000","101100","101110","101010","111100","111110","111010","011100","011110","101001","111001","010111","101101","101111","101011"]
-        let b6 = ["101001", "111001", "010111", "101101", "101111", "101011"]
+        let index: Int = Int(arc4random_uniform(UInt32(Alphabet.code.count)))
+        self.learningChar = Array(Alphabet.code.keys)[index]
         
-        if b1.contains(learnCharCode){
-            OB1.setTitle("Tap for " + String(brailleAlphabet[learnCharCode] ?? "1"), for: .normal)
+        let
+        b1 = VibrateCode.set1,
+        b2 = VibrateCode.set2,
+        b3 = VibrateCode.set3,
+        b4 = VibrateCode.set4,
+        b5 = VibrateCode.set5,
+        b6 = VibrateCode.set6
+        
+        if b1.contains(learningChar){
+            OB1.setTitle("Tap for " + String(Alphabet.code[learningChar] ?? "1"), for: .normal)
             OB1.backgroundColor = UIColor.green
         } else {
             OB1.backgroundColor = UIColor.white
             OB1.setTitle("Not correct", for: .normal)
         }
-        if b2.contains(learnCharCode){
-            OB2.setTitle("Tap for " + String(brailleAlphabet[learnCharCode] ?? "1"), for: .normal)
+        if b2.contains(learningChar){
+            OB2.setTitle("Tap for " + String(Alphabet.code[learningChar] ?? "1"), for: .normal)
             OB2.backgroundColor = UIColor.green
         } else {
             OB2.backgroundColor = UIColor.white
             OB2.setTitle("Not correct ", for: .normal)
         }
-        if b3.contains(learnCharCode){
-            OB3.setTitle("Tap for " + String(brailleAlphabet[learnCharCode] ?? "1"), for: .normal)
+        if b3.contains(learningChar){
+            OB3.setTitle("Tap for " + String(Alphabet.code[learningChar] ?? "1"), for: .normal)
             OB3.backgroundColor = UIColor.green
         } else {
             OB3.backgroundColor = UIColor.white
             OB3.setTitle("Not correct", for: .normal)
         }
-        if b4.contains(learnCharCode){
-            OB4.setTitle("Tap for " + String(brailleAlphabet[learnCharCode] ?? "1"), for: .normal)
+        if b4.contains(learningChar){
+            OB4.setTitle("Tap for " + String(Alphabet.code[learningChar] ?? "1"), for: .normal)
             OB4.backgroundColor = UIColor.green
         } else {
             OB4.backgroundColor = UIColor.white
             OB4.setTitle("Not correct", for: .normal)
         }
-        if b5.contains(learnCharCode){
-            OB5.setTitle("Tap for " + String(brailleAlphabet[learnCharCode] ?? "1"), for: .normal)
+        if b5.contains(learningChar){
+            OB5.setTitle("Tap for " + String(Alphabet.code[learningChar] ?? "1"), for: .normal)
             OB5.backgroundColor = UIColor.green
         } else {
             OB5.backgroundColor = UIColor.white
             OB5.setTitle("Not correct", for: .normal)
         }
-        if b6.contains(learnCharCode){
-            OB6.setTitle("Tap for " + String(brailleAlphabet[learnCharCode] ?? "1"), for: .normal)
+        if b6.contains(learningChar){
+            OB6.setTitle("Tap for " + String(Alphabet.code[learningChar] ?? "1"), for: .normal)
             OB6.backgroundColor = UIColor.green
         } else {
             OB6.backgroundColor = UIColor.white
@@ -215,8 +151,8 @@ class LearnVC: UIViewController {
         // true only when all buttons are pressed at least once
         if myset.count == 6 {
             // play audio here
-            print(brailleAlphabet[learnCharCode] ?? "error in playing audio")
-            loadAudio(learningChar: brailleAlphabet[learnCharCode]!)
+            print(Alphabet.code[learningChar] ?? "error in playing audio")
+            loadAudio(learningChar: Alphabet.code[learningChar]!)
             audioPlayer?.play()
             // initialize another learn character
             randChar()
@@ -226,7 +162,7 @@ class LearnVC: UIViewController {
     }
 
     func loadAudio(learningChar: Character) {
-        if let audioPath = Bundle.main.path(forResource: audioList[learningChar], ofType: "mp3") {
+        if let audioPath = Bundle.main.path(forResource: AlphabetAudio.map[learningChar], ofType: "mp3") {
             let url = NSURL.fileURL(withPath: audioPath)
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
@@ -240,3 +176,5 @@ class LearnVC: UIViewController {
     // loadAudio("c") ("c" is the learning charater)
     // audioplayer?.play()
 }
+
+
