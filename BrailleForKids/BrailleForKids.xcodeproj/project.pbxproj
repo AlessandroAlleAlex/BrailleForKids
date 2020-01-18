@@ -106,6 +106,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0B6BFC23D3BA85002ED56D /* AudioPiano */ = {
+			isa = PBXGroup;
+			children = (
+				C559EFD323656E3700F2EAA0 /* B5.mp3 */,
+				C559EFD123656E3600F2EAA0 /* E5.mp3 */,
+				C559EFCE23656E3600F2EAA0 /* F#5.mp3 */,
+				C559EFD023656E3600F2EAA0 /* F5.mp3 */,
+				C559EFCF23656E3600F2EAA0 /* G#5.mp3 */,
+				C559EFD223656E3700F2EAA0 /* G5.mp3 */,
+				C559EFBF23656E2A00F2EAA0 /* A#5.mp3 */,
+				C559EFC123656E2A00F2EAA0 /* A5.mp3 */,
+				C559EFBC23656E2900F2EAA0 /* C#5.mp3 */,
+				C559EFBE23656E2A00F2EAA0 /* C#6.mp3 */,
+				C559EFBD23656E2900F2EAA0 /* C5.mp3 */,
+				C559EFC323656E2A00F2EAA0 /* C6.mp3 */,
+				C559EFC223656E2A00F2EAA0 /* D#5.mp3 */,
+				C559EFC423656E2A00F2EAA0 /* D5.mp3 */,
+				C559EFC023656E2A00F2EAA0 /* D6.mp3 */,
+			);
+			path = AudioPiano;
+			sourceTree = "<group>";
+		};
+		AD0B6BFD23D3BACC002ED56D /* AudioAlphabet */ = {
+			isa = PBXGroup;
+			children = (
+				ADAB8A32236505D000889816 /* alphabetK.mp3 */,
+				ADAB8A39236505D000889816 /* alphabetL.mp3 */,
+				ADAB8A37236505D000889816 /* alphabetM.mp3 */,
+				ADAB8A30236505D000889816 /* alphabetN.mp3 */,
+				ADAB8A2D236505D000889816 /* alphabetO.mp3 */,
+				ADAB8A2F236505D000889816 /* alphabetA.mp3 */,
+				ADAB8A38236505D000889816 /* alphabetB.mp3 */,
+				ADAB8A35236505D000889816 /* alphabetD.mp3 */,
+				ADAB8A2E236505D000889816 /* alphabetE.mp3 */,
+				ADAB8A36236505D000889816 /* alphabetF.mp3 */,
+				ADAB8A31236505D000889816 /* alphabetG.mp3 */,
+				ADAB8A3A236505D100889816 /* alphabetH.mp3 */,
+				ADAB8A2C236505D000889816 /* alphabetI.mp3 */,
+				ADAB8A34236505D000889816 /* alphabetJ.mp3 */,
+				ADAB8A33236505D000889816 /* alphabetC.mp3 */,
+			);
+			path = AudioAlphabet;
+			sourceTree = "<group>";
+		};
 		C555CEBF2364EBEF009973FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,46 +178,18 @@
 		D2B3B52E2363F52000262BA9 /* BrailleForKids */ = {
 			isa = PBXGroup;
 			children = (
-				C559EFD323656E3700F2EAA0 /* B5.mp3 */,
-				C559EFD123656E3600F2EAA0 /* E5.mp3 */,
-				C559EFCE23656E3600F2EAA0 /* F#5.mp3 */,
-				C559EFD023656E3600F2EAA0 /* F5.mp3 */,
-				C559EFCF23656E3600F2EAA0 /* G#5.mp3 */,
-				C559EFD223656E3700F2EAA0 /* G5.mp3 */,
-				C559EFBF23656E2A00F2EAA0 /* A#5.mp3 */,
-				C559EFC123656E2A00F2EAA0 /* A5.mp3 */,
-				C559EFBC23656E2900F2EAA0 /* C#5.mp3 */,
-				C559EFBE23656E2A00F2EAA0 /* C#6.mp3 */,
-				C559EFBD23656E2900F2EAA0 /* C5.mp3 */,
-				C559EFC323656E2A00F2EAA0 /* C6.mp3 */,
-				C559EFC223656E2A00F2EAA0 /* D#5.mp3 */,
-				C559EFC423656E2A00F2EAA0 /* D5.mp3 */,
-				C559EFC023656E2A00F2EAA0 /* D6.mp3 */,
-				ADAB8A2F236505D000889816 /* alphabetA.mp3 */,
-				ADAB8A38236505D000889816 /* alphabetB.mp3 */,
-				ADAB8A33236505D000889816 /* alphabetC.mp3 */,
-				ADAB8A35236505D000889816 /* alphabetD.mp3 */,
-				ADAB8A2E236505D000889816 /* alphabetE.mp3 */,
-				ADAB8A36236505D000889816 /* alphabetF.mp3 */,
-				ADAB8A31236505D000889816 /* alphabetG.mp3 */,
-				ADAB8A3A236505D100889816 /* alphabetH.mp3 */,
-				ADAB8A2C236505D000889816 /* alphabetI.mp3 */,
-				ADAB8A34236505D000889816 /* alphabetJ.mp3 */,
-				ADAB8A32236505D000889816 /* alphabetK.mp3 */,
-				ADAB8A39236505D000889816 /* alphabetL.mp3 */,
-				ADAB8A37236505D000889816 /* alphabetM.mp3 */,
-				ADAB8A30236505D000889816 /* alphabetN.mp3 */,
-				ADAB8A2D236505D000889816 /* alphabetO.mp3 */,
+				AD0B6BFC23D3BA85002ED56D /* AudioPiano */,
+				AD0B6BFD23D3BACC002ED56D /* AudioAlphabet */,
 				D2B3B52F2363F52000262BA9 /* AppDelegate.swift */,
 				D2B3B5312363F52000262BA9 /* SceneDelegate.swift */,
 				D2B3B5332363F52000262BA9 /* ViewController.swift */,
 				D2B3B5432363FA7500262BA9 /* LearnVC.swift */,
-				D2B3B5352363F52000262BA9 /* Main.storyboard */,
-				C555CEBB23640604009973FD /* PianoViewController.swift */,
-				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
-				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
-				D2B3B53D2363F52200262BA9 /* Info.plist */,
 				ADAB8A4A2365080800889816 /* TextViewController.swift */,
+				C555CEBB23640604009973FD /* PianoViewController.swift */,
+				D2B3B5352363F52000262BA9 /* Main.storyboard */,
+				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
+				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
+				D2B3B53D2363F52200262BA9 /* Info.plist */,
 			);
 			path = BrailleForKids;
 			sourceTree = "<group>";
