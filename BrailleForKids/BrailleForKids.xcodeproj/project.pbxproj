@@ -26,6 +26,9 @@
 		ADAB8A48236505D100889816 /* alphabetL.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADAB8A39236505D000889816 /* alphabetL.mp3 */; };
 		ADAB8A49236505D100889816 /* alphabetH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADAB8A3A236505D100889816 /* alphabetH.mp3 */; };
 		ADAB8A4B2365080800889816 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB8A4A2365080800889816 /* TextViewController.swift */; };
+		C528621F23D455B30014D4A3 /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C528621D23D455B20014D4A3 /* Correct.mp3 */; };
+		C528622023D455B30014D4A3 /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C528621E23D455B30014D4A3 /* Wrong.mp3 */; };
+		C528622223D45A0A0014D4A3 /* quizModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C528622123D45A0A0014D4A3 /* quizModeViewController.swift */; };
 		C555CEBC23640604009973FD /* PianoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555CEBB23640604009973FD /* PianoViewController.swift */; };
 		C555CEC12364EBF0009973FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C555CEC02364EBF0009973FD /* AVFoundation.framework */; };
 		C559EFC523656E2A00F2EAA0 /* C#5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C559EFBC23656E2900F2EAA0 /* C#5.mp3 */; };
@@ -76,6 +79,9 @@
 		ADAB8A39236505D000889816 /* alphabetL.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alphabetL.mp3; sourceTree = "<group>"; };
 		ADAB8A3A236505D100889816 /* alphabetH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alphabetH.mp3; sourceTree = "<group>"; };
 		ADAB8A4A2365080800889816 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		C528621D23D455B20014D4A3 /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
+		C528621E23D455B30014D4A3 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
+		C528622123D45A0A0014D4A3 /* quizModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizModeViewController.swift; sourceTree = "<group>"; };
 		C555CEBB23640604009973FD /* PianoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoViewController.swift; sourceTree = "<group>"; };
 		C555CEC02364EBF0009973FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C559EFBC23656E2900F2EAA0 /* C#5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "C#5.mp3"; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 		AD0B6BFD23D3BACC002ED56D /* AudioAlphabet */ = {
 			isa = PBXGroup;
 			children = (
+				C528621D23D455B20014D4A3 /* Correct.mp3 */,
+				C528621E23D455B30014D4A3 /* Wrong.mp3 */,
 				ADAB8A32236505D000889816 /* alphabetK.mp3 */,
 				ADAB8A39236505D000889816 /* alphabetL.mp3 */,
 				ADAB8A37236505D000889816 /* alphabetM.mp3 */,
@@ -211,6 +219,7 @@
 				D2B3B53A2363F52200262BA9 /* LaunchScreen.storyboard */,
 				D2B3B5382363F52200262BA9 /* Assets.xcassets */,
 				D2B3B53D2363F52200262BA9 /* Info.plist */,
+				C528622123D45A0A0014D4A3 /* quizModeViewController.swift */,
 			);
 			path = BrailleForKids;
 			sourceTree = "<group>";
@@ -277,12 +286,14 @@
 				C559EFD823656E3700F2EAA0 /* G5.mp3 in Resources */,
 				C559EFC723656E2A00F2EAA0 /* C#6.mp3 in Resources */,
 				C559EFC623656E2A00F2EAA0 /* C5.mp3 in Resources */,
+				C528622023D455B30014D4A3 /* Wrong.mp3 in Resources */,
 				C559EFC923656E2A00F2EAA0 /* D6.mp3 in Resources */,
 				C559EFD423656E3700F2EAA0 /* F#5.mp3 in Resources */,
 				ADAB8A3D236505D100889816 /* alphabetE.mp3 in Resources */,
 				C559EFD723656E3700F2EAA0 /* E5.mp3 in Resources */,
 				ADAB8A47236505D100889816 /* alphabetB.mp3 in Resources */,
 				C559EFD923656E3700F2EAA0 /* B5.mp3 in Resources */,
+				C528621F23D455B30014D4A3 /* Correct.mp3 in Resources */,
 				ADAB8A49236505D100889816 /* alphabetH.mp3 in Resources */,
 				C559EFCB23656E2A00F2EAA0 /* D#5.mp3 in Resources */,
 				C559EFD523656E3700F2EAA0 /* G#5.mp3 in Resources */,
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C528622223D45A0A0014D4A3 /* quizModeViewController.swift in Sources */,
 				D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */,
 				C555CEBC23640604009973FD /* PianoViewController.swift in Sources */,
 				AD0B6C0523D3D9C4002ED56D /* LearnViewController.swift in Sources */,
@@ -473,13 +485,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VS9S27J65P;
+				DEVELOPMENT_TEAM = 5H53HY9PQV;
 				INFOPLIST_FILE = BrailleForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids.;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -491,13 +503,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VS9S27J65P;
+				DEVELOPMENT_TEAM = 5H53HY9PQV;
 				INFOPLIST_FILE = BrailleForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids.;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
