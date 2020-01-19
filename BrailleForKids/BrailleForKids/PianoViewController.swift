@@ -10,22 +10,9 @@ import UIKit
 import AVFoundation
 class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     
-    @IBOutlet weak var a: UIButton!
-    @IBOutlet weak var b: UIButton!
-    @IBOutlet weak var c: UIButton!
-    @IBOutlet weak var d: UIButton!
-    @IBOutlet weak var e: UIButton!
-    @IBOutlet weak var f: UIButton!
-    @IBOutlet weak var g: UIButton!
-    @IBOutlet weak var h: UIButton!
-    @IBOutlet weak var i: UIButton!
-    @IBOutlet weak var j: UIButton!
-    @IBOutlet weak var k: UIButton!
-    @IBOutlet weak var l: UIButton!
-    @IBOutlet weak var m: UIButton!
-    @IBOutlet weak var n: UIButton!
-    
-    
+    /**
+     * Globals:
+     */
     var audioPlayer : AVAudioPlayer?
     var audioPlayer2 : AVAudioPlayer?
     var audioPlayer3 : AVAudioPlayer?
@@ -42,6 +29,24 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer14 : AVAudioPlayer?
     var modeaudio : AVAudioPlayer?
     
+    @IBOutlet weak var a: UIButton!
+    @IBOutlet weak var b: UIButton!
+    @IBOutlet weak var c: UIButton!
+    @IBOutlet weak var d: UIButton!
+    @IBOutlet weak var e: UIButton!
+    @IBOutlet weak var f: UIButton!
+    @IBOutlet weak var g: UIButton!
+    @IBOutlet weak var h: UIButton!
+    @IBOutlet weak var i: UIButton!
+    @IBOutlet weak var j: UIButton!
+    @IBOutlet weak var k: UIButton!
+    @IBOutlet weak var l: UIButton!
+    @IBOutlet weak var m: UIButton!
+    @IBOutlet weak var n: UIButton!
+    
+    /**
+     Preview setup
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
@@ -207,6 +212,9 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer14?.play()
     }
     
+    /**
+     Play audio when changing mode
+     */
     func playModeAudio() {
         //print("playAudio begin!!!")
         if let soundURL = Bundle.main.path(forResource: "pianomode", ofType: "mp3"){
@@ -220,6 +228,9 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
         modeaudio?.play()
     }
     
+    /**
+     Gesture recognizer for navigating to next view.
+     */
     @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
         //print("TAPPED")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

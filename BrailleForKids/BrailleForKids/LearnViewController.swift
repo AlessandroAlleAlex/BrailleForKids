@@ -14,38 +14,41 @@ import Speech
 
 class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
     
-    // Globals
+    /**
+     * Globals:
+     *
+     * audioEngine: updates when the mic is receiving audio
+     * speechRecognizer: speech recognition, can fail to recognize speech
+     * speechRecognizer: and return nil, so it’s best to make it an optional.
+     * request: allocates speech as the user speaks in real-time and controls the buffering
+     * recognitionTask: is used to manage, cancel, or stop the current recognition task
+     */
     var touchSpot: CGRect = CGRect()
     var touchedCells: Set<Int> = []
     var curBraille: Braille = Braille()
     var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     var audioPlayer2: AVAudioPlayer?
     var speechFlag: Bool = false
-    
-    // It will give updates when the mic is receiving audio
     let audioEngine = AVAudioEngine()
-    // This will do the actual speech recognition. It can fail to recognize speech
-    // and return nil, so it’s best to make it an optional.
     let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-GB"))!
-    // This allocates speech as the user speaks in real-time and controls the buffering
     let request = SFSpeechAudioBufferRecognitionRequest()
-    // This will be used to manage, cancel, or stop the current recognition task
     var recognitionTask: SFSpeechRecognitionTask?
     
-    @IBOutlet weak var BrailleCell: UIImageView!
     @IBOutlet weak var cell1: UIImageView!
     @IBOutlet weak var cell2: UIImageView!
     @IBOutlet weak var cell3: UIImageView!
     @IBOutlet weak var cell4: UIImageView!
     @IBOutlet weak var cell5: UIImageView!
     @IBOutlet weak var cell6: UIImageView!
+    @IBOutlet weak var curLetter: UILabel!
     
     /**
-     Sep up
+     Preview setup.
      */
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setRandLetter()
+        self.playAudio()
         self.displayLetter()
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
         tap.numberOfTapsRequired = 3
@@ -67,50 +70,44 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         if let point = touches.first?.location(in: self.view) {
             if (cell1.frame).contains(point) {
-                //print("in cell1")
                 curBraille.cellFlags[0] = true
                 if (Array(code)[0] == "1") {
-                    print("in cell1")
+                    //print("in cell1")
                     UIDevice.vibrate()
                 }
             }
             else if (cell2.frame).contains(point) {
-                //print("in cell2")
                 curBraille.cellFlags[1] = true
                 if (Array(code)[1] == "1") {
-                    print("in cell2")
+                    //print("in cell2")
                     UIDevice.vibrate()
                 }
             }
             else if (cell3.frame).contains(point) {
-                //print("in cell3")
                 curBraille.cellFlags[2] = true
                 if (Array(code)[2] == "1") {
-                    print("in cell3")
+                    //print("in cell3")
                     UIDevice.vibrate()
                 }
             }
             else if (cell4.frame).contains(point) {
-                //print("in cell4")
                 curBraille.cellFlags[3] = true
-                if (Array(code)[4] == "1") {
-                    print("in cell4")
+                if (Array(code)[3] == "1") {
+                    //print("in cell4")
                     UIDevice.vibrate()
                 }
             }
             else if (cell5.frame).contains(point) {
-                //print("in cell5")
                 curBraille.cellFlags[4] = true
                 if (Array(code)[4] == "1") {
-                    print("in cell5")
+                    //print("in cell5")
                     UIDevice.vibrate()
                 }
             }
             else if (cell6.frame).contains(point) {
-                //print("in cell6")
                 curBraille.cellFlags[5] = true
                 if (Array(code)[5] == "1") {
-                    print("in cell6")
+                    //print("in cell6")
                     UIDevice.vibrate()
                 }
             }
@@ -124,17 +121,18 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.playAudio()
         self.audioPlayer.play()
         self.setRandLetter()
+        //self.playAudio()
         self.displayLetter()
     }
     
     /**
-     
+     Random generatr a letter
      */
     func setRandLetter() {
         let randInt: Int = Int(arc4random_uniform(UInt32(AlphabetCode.count)))
         self.curBraille.code = Array(AlphabetCode.values)[randInt]
         self.curBraille.letter = Array(AlphabetCode.keys)[randInt]
-        print("setRandLetter(): \(curBraille.code), \(curBraille.letter)")
+        //print("setRandLetter(): \(curBraille.code), \(curBraille.letter)")
     }
     
     /**
@@ -143,6 +141,7 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
     func playAudio() {
         if let audioPath = Bundle.main
             .path(forResource: AlphabetAudio[curBraille.letter], ofType: "mp3") {
+            print("loading audio: \(String(describing: AlphabetAudio[curBraille.letter]))")
             let url = NSURL.fileURL(withPath: audioPath)
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
@@ -179,9 +178,14 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.present(next, animated: true, completion: nil)
     }
     
+    /**
+     Highlight the letter coressponding cell.
+     */
     func displayLetter() {
         let bits = Array(curBraille.code)
         var index: Int = 0
+        
+        self.curLetter.text = curBraille.letter
         
         cell1.alpha = 1
         cell2.alpha = 1

@@ -14,7 +14,15 @@ import Speech
 
 class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
     
-    // Globals
+    /**
+     * Globals
+     *
+     * audioEngine: updates when the mic is receiving audio
+     * speechRecognizer: speech recognition, can fail to recognize speech
+     * speechRecognizer: and return nil, so it’s best to make it an optional.
+     * request: allocates speech as the user speaks in real-time and controls the buffering
+     * recognitionTask: is used to manage, cancel, or stop the current recognition task
+     */
     var touchSpot: CGRect = CGRect()
     var touchedCells: Set<Int> = []
     var curBraille: Braille = Braille()
@@ -22,14 +30,9 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
     var audioPlayer2: AVAudioPlayer?
     var isCorrect: Bool = false
     
-    // It will give updates when the mic is receiving audio
     let audioEngine = AVAudioEngine()
-    // This will do the actual speech recognition. It can fail to recognize speech
-    // and return nil, so it’s best to make it an optional.
     let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-GB"))!
-    // This allocates speech as the user speaks in real-time and controls the buffering
     let request = SFSpeechAudioBufferRecognitionRequest()
-    // This will be used to manage, cancel, or stop the current recognition task
     var recognitionTask: SFSpeechRecognitionTask?
     
     @IBOutlet weak var cell1: UIImageView!
@@ -38,16 +41,19 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var cell4: UIImageView!
     @IBOutlet weak var cell5: UIImageView!
     @IBOutlet weak var cell6: UIImageView!
+    @IBOutlet weak var curLetter: UILabel!
     
     /**
-     Set up
+     Preview setup
      */
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
         tap.numberOfTapsRequired = 3
         self.view.addGestureRecognizer(tap)
-        playModeAudio()
+        self.playModeAudio()
+        self.setRandLetter()
+        self.curLetter.text = self.curBraille.letter
     }
     
     /**
@@ -64,23 +70,20 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         if let point = touches.first?.location(in: self.view) {
             if (cell1.frame).contains(point) {
-                //print("in cell1")
                 curBraille.cellFlags[0] = true
                 if (Array(code)[0] == "1") {
-                    print("in cell1")
+                    //print("in cell1")
                     UIDevice.vibrate()
                 }
             }
             else if (cell2.frame).contains(point) {
-                //print("in cell2")
                 curBraille.cellFlags[1] = true
                 if (Array(code)[1] == "1") {
-                    print("in cell2")
+                    //print("in cell2")
                     UIDevice.vibrate()
                 }
             }
             else if (cell3.frame).contains(point) {
-                //print("in cell3")
                 curBraille.cellFlags[2] = true
                 if (Array(code)[2] == "1") {
                     print("in cell3")
@@ -88,15 +91,13 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
                 }
             }
             else if (cell4.frame).contains(point) {
-                //print("in cell4")
                 curBraille.cellFlags[3] = true
-                if (Array(code)[4] == "1") {
+                if (Array(code)[3] == "1") {
                     print("in cell4")
                     UIDevice.vibrate()
                 }
             }
             else if (cell5.frame).contains(point) {
-                //print("in cell5")
                 curBraille.cellFlags[4] = true
                 if (Array(code)[4] == "1") {
                     print("in cell5")
@@ -104,7 +105,6 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
                 }
             }
             else if (cell6.frame).contains(point) {
-                //print("in cell6")
                 curBraille.cellFlags[5] = true
                 if (Array(code)[5] == "1") {
                     print("in cell6")
@@ -122,14 +122,14 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     /**
-      Generate a random letter.
-      */
-     func setRandLetter() {
-         let randInt: Int = Int(arc4random_uniform(UInt32(AlphabetCode.count)))
-         self.curBraille.code = Array(AlphabetCode.values)[randInt]
-         self.curBraille.letter = Array(AlphabetCode.keys)[randInt]
-         print("setRandLetter(): \(curBraille.code), \(curBraille.letter)")
-     }
+     Generate a random letter.
+     */
+    func setRandLetter() {
+        let randInt: Int = Int(arc4random_uniform(UInt32(AlphabetCode.count)))
+        self.curBraille.code = Array(AlphabetCode.values)[randInt]
+        self.curBraille.letter = Array(AlphabetCode.keys)[randInt]
+        print("setRandLetter(): \(curBraille.code), \(curBraille.letter)")
+    }
     
     /**
      Check user's speech.
@@ -178,9 +178,10 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
         recognitionTask = speechRecognizer.recognitionTask(with: request, resultHandler: { result, error in
             if let res = result {
                 let returnedString = res.bestTranscription.formattedString
-                print("------------------",self.curBraille.letter)
+                print("------------------", self.curBraille.letter)
                 if (self.curBraille.letter == String((returnedString.first ?? "-")).lowercased()) {
                     self.isCorrect = true
+                    
                 }
                 print("ReturnStr = \(returnedString.first ?? "-")") // get the LAST character form the input speech
                 print("returnedString --> \(returnedString)...")
@@ -199,20 +200,21 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
             self.recognitionTask = nil
             self.audioEngine.inputNode.removeTap(onBus: 0)
             
-
             print("isCorrect = \(self.isCorrect)")
             if (self.isCorrect) {
+                self.curLetter.text = "Correct"
                 self.isCorrect = false
                 self.playAudio()
-                self.audioPlayer.play()
             } else {
-                //self.playAudio() //play wrong
-                //self.audioPlayer.play()
+                self.curLetter.text = "Try Again"
+                self.playAudio()
+                self.audioPlayer.play()
             }
-            
+
             // audio and reset
             self.curBraille = Braille()
             self.setRandLetter()
+            self.curLetter.text = self.curBraille.letter
         }
     }
     
@@ -220,7 +222,16 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
      Play audio for correct or wrong answer
      */
     func playAudio() {
-        if let audioPath = Bundle.main.path(forResource: "Correct", ofType: "mp3"){
+        var audioFile: String
+
+        if (self.isCorrect == true) {
+            audioFile = "Correct"
+        } else {
+            audioFile = "Wrong"
+        }
+        if let audioPath = Bundle.main
+            .path(forResource: "Correct", ofType: "mp3") {
+            print("loading audio: \(audioPath)")
             let url = NSURL.fileURL(withPath: audioPath)
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
