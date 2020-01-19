@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U8I-P5-z4J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8iz-OZ-riJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -149,6 +149,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U93-E7-iHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-78" y="855"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EjD-x1-5NP">
+            <objects>
+                <viewController storyboardIdentifier="SMSVC" id="8iz-OZ-riJ" customClass="SMSViewController" customModule="BrailleForKids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="naX-5E-STE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send SMS To?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCj-ht-ygy">
+                                <rect key="frame" x="146.5" y="431" width="121" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-Rm-5HG">
+                                <rect key="frame" x="189" y="488" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendBtn:" destination="8iz-OZ-riJ" eventType="touchUpInside" id="LrB-Oa-0Vo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NoH-jU-bsk" firstAttribute="trailing" secondItem="dZt-Rm-5HG" secondAttribute="trailing" constant="189" id="226-Ln-twE"/>
+                            <constraint firstItem="dZt-Rm-5HG" firstAttribute="top" secondItem="mCj-ht-ygy" secondAttribute="bottom" constant="23" id="PNL-qB-045"/>
+                            <constraint firstItem="dZt-Rm-5HG" firstAttribute="leading" secondItem="NoH-jU-bsk" secondAttribute="leading" constant="189" id="akN-xS-25D"/>
+                            <constraint firstItem="mCj-ht-ygy" firstAttribute="centerY" secondItem="naX-5E-STE" secondAttribute="centerY" id="ane-ab-CMu"/>
+                            <constraint firstItem="mCj-ht-ygy" firstAttribute="centerX" secondItem="naX-5E-STE" secondAttribute="centerX" id="vXT-Kf-qtu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NoH-jU-bsk"/>
+                    </view>
+                    <connections>
+                        <outlet property="phonetxtfield" destination="mCj-ht-ygy" id="8QK-dA-orn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7c-4C-POB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="856.47321428571422"/>
         </scene>
         <!--Piano View Controller-->
         <scene sceneID="94E-Ca-deR">

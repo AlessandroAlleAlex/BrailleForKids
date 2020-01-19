@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 import AVFoundation
 
-class LearnVC: UIViewController {
+class LearnVC: UIViewController{
     
     @IBOutlet weak var OB1: UIButton!
     @IBOutlet weak var OB2: UIButton!

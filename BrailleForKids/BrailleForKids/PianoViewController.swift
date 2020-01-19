@@ -43,6 +43,9 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
+//               tap.numberOfTapsRequired = 3
+//        self.view.addGestureRecognizer(tap)
         if let soundURL = Bundle.main.path(forResource: "C5", ofType: "mp3"){
             let url = NSURL.fileURL(withPath: soundURL)
             do{
@@ -156,6 +159,13 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
                            }
                }
     }
+    @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
+           print("TAPPED")
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let vs = storyboard.instantiateViewController(identifier: "PianoViewController")
+           let next = vs as! PianoViewController
+           self.present(next, animated: true, completion: nil)
+       }
     
     func vibrate() {
         AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate) {
