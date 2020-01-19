@@ -46,6 +46,7 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setRandLetter()
+        self.displayLetter()
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
         tap.numberOfTapsRequired = 3
         self.view.addGestureRecognizer(tap)
@@ -123,6 +124,7 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.playAudio()
         self.audioPlayer.play()
         self.setRandLetter()
+        self.displayLetter()
     }
     
     /**
@@ -175,6 +177,45 @@ class LearnViewController: UIViewController, SFSpeechRecognizerDelegate {
         let next = vs as! quizModeViewController
         next.modalPresentationStyle = .fullScreen
         self.present(next, animated: true, completion: nil)
+    }
+    
+    func displayLetter() {
+        let bits = Array(curBraille.code)
+        var index: Int = 0
+        
+        cell1.alpha = 1
+        cell2.alpha = 1
+        cell3.alpha = 1
+        cell4.alpha = 1
+        cell5.alpha = 1
+        cell6.alpha = 1
+        for bit in bits {
+            if (bit == "0") {
+                switch index {
+                case 0:
+                    cell1.alpha = 0.5
+                    break;
+                case 1:
+                    cell2.alpha = 0.5
+                    break;
+                case 2:
+                    cell3.alpha = 0.5
+                    break;
+                case 3:
+                    cell4.alpha = 0.5
+                    break;
+                case 4:
+                    cell5.alpha = 0.5
+                    break;
+                case 5:
+                    cell6.alpha = 0.5
+                    break;
+                default:
+                    break;
+                }
+            }
+            index += 1
+        }
     }
 }
 
