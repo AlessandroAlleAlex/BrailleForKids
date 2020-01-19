@@ -240,7 +240,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-df-Vti">
-                                <rect key="frame" x="145" y="81" width="124" height="29"/>
+                                <rect key="frame" x="83" y="81" width="248" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -253,12 +253,12 @@
                             <constraint firstItem="zYp-Tw-xUP" firstAttribute="top" secondItem="EI9-uF-ZW0" secondAttribute="bottom" constant="90" id="7wg-NR-7Jr"/>
                             <constraint firstItem="cXw-8e-ZCM" firstAttribute="top" secondItem="BVo-us-GHw" secondAttribute="top" constant="93" id="8xy-nr-TzG"/>
                             <constraint firstItem="Zo2-df-Vti" firstAttribute="top" secondItem="BVo-us-GHw" secondAttribute="top" constant="37" id="Hae-Se-uDa"/>
-                            <constraint firstItem="BVo-us-GHw" firstAttribute="trailing" secondItem="Zo2-df-Vti" secondAttribute="trailing" constant="145" id="Kbo-MB-MKu"/>
+                            <constraint firstItem="BVo-us-GHw" firstAttribute="trailing" secondItem="Zo2-df-Vti" secondAttribute="trailing" constant="83" id="Kbo-MB-MKu"/>
                             <constraint firstItem="hCg-1O-PAe" firstAttribute="top" secondItem="xZr-7Y-oNY" secondAttribute="bottom" constant="90" id="Lu5-99-Nux"/>
                             <constraint firstItem="enU-Jw-b22" firstAttribute="top" secondItem="hCg-1O-PAe" secondAttribute="bottom" constant="90" id="NRf-UZ-5m0"/>
                             <constraint firstItem="EI9-uF-ZW0" firstAttribute="top" secondItem="cXw-8e-ZCM" secondAttribute="bottom" constant="90" id="NWv-oa-fz0"/>
                             <constraint firstItem="xZr-7Y-oNY" firstAttribute="top" secondItem="BVo-us-GHw" secondAttribute="top" constant="90" id="bhd-kD-c4A"/>
-                            <constraint firstItem="Zo2-df-Vti" firstAttribute="leading" secondItem="BVo-us-GHw" secondAttribute="leading" constant="145" id="fHe-rh-yBu"/>
+                            <constraint firstItem="Zo2-df-Vti" firstAttribute="leading" secondItem="BVo-us-GHw" secondAttribute="leading" constant="83" id="fHe-rh-yBu"/>
                             <constraint firstItem="cXw-8e-ZCM" firstAttribute="leading" secondItem="BVo-us-GHw" secondAttribute="leading" constant="30" id="iXs-Z7-Ida"/>
                             <constraint firstItem="xZr-7Y-oNY" firstAttribute="leading" secondItem="cXw-8e-ZCM" secondAttribute="trailing" constant="74" id="jdw-vg-gWB"/>
                             <constraint firstItem="xZr-7Y-oNY" firstAttribute="leading" secondItem="hCg-1O-PAe" secondAttribute="leading" id="pb5-J6-kw1"/>
@@ -270,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI4-gm-I4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="814"/>
+            <point key="canvasLocation" x="1769.5652173913045" y="841.74107142857144"/>
         </scene>
         <!--Piano View Controller-->
         <scene sceneID="94E-Ca-deR">
@@ -558,7 +558,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIq-DI-Ly4">
-                                <rect key="frame" x="145" y="76" width="124" height="29"/>
+                                <rect key="frame" x="85" y="76" width="245" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -572,10 +572,10 @@
                             <constraint firstItem="32z-UW-G9a" firstAttribute="top" secondItem="BR0-tm-pcn" secondAttribute="bottom" constant="90" id="FpV-wJ-Nq9"/>
                             <constraint firstItem="86e-QS-hu7" firstAttribute="trailing" secondItem="r5l-4r-s3G" secondAttribute="trailing" constant="30" id="LRD-1T-ZTB"/>
                             <constraint firstItem="BR0-tm-pcn" firstAttribute="top" secondItem="Y9K-Xz-39m" secondAttribute="bottom" constant="90" id="Msh-rg-l0D"/>
-                            <constraint firstItem="86e-QS-hu7" firstAttribute="trailing" secondItem="aIq-DI-Ly4" secondAttribute="trailing" constant="145" id="N7S-O7-a3k"/>
+                            <constraint firstItem="86e-QS-hu7" firstAttribute="trailing" secondItem="aIq-DI-Ly4" secondAttribute="trailing" constant="84" id="N7S-O7-a3k"/>
                             <constraint firstItem="Y9K-Xz-39m" firstAttribute="leading" secondItem="86e-QS-hu7" secondAttribute="leading" constant="30" id="S83-xW-jev"/>
                             <constraint firstItem="aIq-DI-Ly4" firstAttribute="top" secondItem="86e-QS-hu7" secondAttribute="top" constant="32" id="T0Q-E1-zfL"/>
-                            <constraint firstItem="aIq-DI-Ly4" firstAttribute="leading" secondItem="86e-QS-hu7" secondAttribute="leading" constant="145" id="WSD-Ce-SXr"/>
+                            <constraint firstItem="aIq-DI-Ly4" firstAttribute="leading" secondItem="86e-QS-hu7" secondAttribute="leading" constant="85" id="WSD-Ce-SXr"/>
                             <constraint firstItem="r5l-4r-s3G" firstAttribute="top" secondItem="86e-QS-hu7" secondAttribute="top" constant="84" id="ZWR-X9-kQF"/>
                             <constraint firstItem="86e-QS-hu7" firstAttribute="trailing" secondItem="htW-13-8Vd" secondAttribute="trailing" constant="30" id="b5d-fi-QKw"/>
                             <constraint firstItem="32z-UW-G9a" firstAttribute="leading" secondItem="86e-QS-hu7" secondAttribute="leading" constant="30" id="fVR-zT-eKR"/>
