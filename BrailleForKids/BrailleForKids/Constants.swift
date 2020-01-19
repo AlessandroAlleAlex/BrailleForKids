@@ -54,20 +54,35 @@ struct VibrateCode {
 //}
 
 let AlphabetCode: [String: String] = [
-    "a": "100000",
+    //"a": "100000",
     "b": "110000"
 ]
 
-struct Letter {
-    var char: String
+struct Braille {
+    var letter: String
     var code: String
+    var cellFlags: [Bool]
     
     init() {
-        char = "A"
+        letter = "A"
         code = "100000"
+        cellFlags = [false,
+        false,
+        false,
+        false,
+        false,
+        false]
+    }
+    
+    func isAllPressed() -> Bool {
+        for flag in cellFlags {
+            if (flag == true) {
+                return false
+            }
+        }
+        return true
     }
 }
-
 
 let AlphabetAudio: [String: String] = [
     "a": "alphabetA",
@@ -97,14 +112,6 @@ let AlphabetAudio: [String: String] = [
     "y": "alphabetY",
     "z": "alphabetZ"
 ]
-
-let Cell1Index = 1;
-let Cell2Index = 2;
-let Cell3Index = 3;
-let Cell4Index = 4;
-let Cell5Index = 5;
-let Cell6Index = 6;
-let CellIndexSum = 1 + 2 + 3 + 4 + 5 + 6;
 
 extension UIDevice {
     static func vibrate() {

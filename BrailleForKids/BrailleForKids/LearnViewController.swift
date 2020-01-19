@@ -16,8 +16,7 @@ class LearnViewController: UIViewController {
     // Globals
     var touchSpot: CGRect = CGRect()
     var touchedCells: Set<Int> = []
-    var curLetter: Letter = Letter()
-    var checkSum: Int = 0
+    var curBraille: Braille = Braille()
     var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var BrailleCell: UIImageView!
@@ -50,7 +49,7 @@ class LearnViewController: UIViewController {
      */
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         var frame: CGRect
-        let code = curLetter.code
+        let code = curBraille.code
         print("code[0] = \(Array(code)[0])")
         print("code[1] = \(Array(code)[1])")
         print("code[2] = \(Array(code)[2])")
@@ -60,7 +59,7 @@ class LearnViewController: UIViewController {
         
         if let point = touches.first?.location(in: self.view) {
             print("in cell1")
-            checkSum += Cell1Index
+            curBraille.cellFlags[0] = true
             frame = cell1.frame
             if (frame.contains(point) &&
                 Array(code)[0] == "1") {
@@ -69,7 +68,7 @@ class LearnViewController: UIViewController {
         }
         else if let point = touches.first?.location(in: self.view) {
             print("in cell2")
-            checkSum += Cell2Index
+            curBraille.cellFlags[1] = true
             frame = cell2.frame
             if (frame.contains(point) &&
                 Array(code)[1] == "1") {
@@ -78,7 +77,7 @@ class LearnViewController: UIViewController {
         }
         else if let point = touches.first?.location(in: self.view) {
             print("in cell3")
-            checkSum += Cell3Index
+            curBraille.cellFlags[2] = true
             frame = cell3.frame
             if (frame.contains(point) &&
                 Array(code)[2] == "1") {
@@ -87,7 +86,7 @@ class LearnViewController: UIViewController {
         }
         else if let point = touches.first?.location(in: self.view) {
             print("in cell4")
-            checkSum += Cell4Index
+            curBraille.cellFlags[3] = true
             frame = cell4.frame
             if (frame.contains(point) &&
             Array(code)[3] == "1") {
@@ -96,7 +95,7 @@ class LearnViewController: UIViewController {
         }
         else if let point = touches.first?.location(in: self.view) {
             print("in cell5")
-            checkSum += Cell5Index
+            curBraille.cellFlags[4] = true
             frame = cell5.frame
             if (frame.contains(point) &&
             Array(code)[4] == "1") {
@@ -105,7 +104,7 @@ class LearnViewController: UIViewController {
         }
         else if let point = touches.first?.location(in: self.view) {
             print("in cell6")
-            checkSum += Cell6Index
+            curBraille.cellFlags[5] = true
             frame = cell6.frame
             if (frame.contains(point) &&
             Array(code)[5] == "1") {
@@ -128,22 +127,22 @@ class LearnViewController: UIViewController {
      
      */
     func setRandLetter() {
-        print("setRandChar(): curRandChar = \(curLetter.code)")
+        print("setRandChar(): curRandChar = \(curBraille.code)")
         let randInt: Int = Int(arc4random_uniform(UInt32(AlphabetCode.count)))
-        self.curLetter.code = Array(AlphabetCode.values)[randInt]
-        self.curLetter.char = Array(AlphabetCode.keys)[randInt]
+        self.curBraille.code = Array(AlphabetCode.values)[randInt]
+        self.curBraille.letter = Array(AlphabetCode.keys)[randInt]
         print("setRandLetter(): ")
-        print("code = \(curLetter.code)")
-        print("char = \(curLetter.char)")
+        print("code = \(curBraille.code)")
+        print("char = \(curBraille.letter)")
     }
     
     /**
      
      */
     func playAudio() {
-        print("playAudio(): \(curLetter.char)")
+        print("playAudio(): \(curBraille.letter)")
         if let audioPath = Bundle.main
-            .path(forResource: AlphabetAudio[curLetter.char], ofType: "mp3") {
+            .path(forResource: AlphabetAudio[curBraille.letter], ofType: "mp3") {
             let url = NSURL.fileURL(withPath: audioPath)
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
@@ -158,13 +157,11 @@ class LearnViewController: UIViewController {
      
      */
     func checkInput() {
-        print("checkLetter(): checkSum = \(checkSum)")
-        if (checkSum == CellIndexSum) {
+        if (curBraille.isAllPressed()) {
             playAudio()
             setRandLetter()
-            //checkSum = 0
         }
-        checkSum = 0
+        self.curBraille = Braille()
     }
 }
 
