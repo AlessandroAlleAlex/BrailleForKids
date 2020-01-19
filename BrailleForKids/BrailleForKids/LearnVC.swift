@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 import AVFoundation
 
-class LearnVC: UIViewController {
+class LearnVC: UIViewController{
     
     @IBOutlet weak var OB1: UIButton!
     @IBOutlet weak var OB2: UIButton!
@@ -84,12 +84,19 @@ class LearnVC: UIViewController {
         super.viewDidLoad()
         randChar()
         print(brailleAlphabet[learnCharCode] ?? "error in playing audio", "*************")
-        
-        
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
+        tap.numberOfTapsRequired = 3
+        self.view.addGestureRecognizer(tap)
+       
         // Do any additional setup after loading the view.
     }
-
+    @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
+        print("TAPPED")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vs = storyboard.instantiateViewController(identifier: "PianoViewController")
+        let verified = vs as! PianoViewController
+        self.present(verified, animated: true, completion: nil)
+    }
     @IBAction func newB1() {
         let vibrateVal = ["100000","110000","100100","100110","100010","110100","110110","110010","101000","111000","101100","101110","101010","111100","111110","111010","101001","111001","101101","101111","101011"]
         if vibrateVal.contains(learnCharCode) {
@@ -236,6 +243,20 @@ class LearnVC: UIViewController {
         }
     }
     
+//    @IBAction func right(_ sender: UISwipeGestureRecognizer) {
+//
+//         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+//            switch swipeGesture.direction {
+//            case UISwipeGestureRecognizerDirection.right:
+//              self.performSegueWithIdentifier("PianoView", sender: self)
+//              break
+//            default:
+//                break
+//            }
+//        }
+//
+//
+//    }
     // you just call two thinhs:
     // loadAudio("c") ("c" is the learning charater)
     // audioplayer?.play()
