@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 class PianoViewController: UIViewController, AVAudioPlayerDelegate {
-
+    
     @IBOutlet weak var a: UIButton!
     @IBOutlet weak var b: UIButton!
     @IBOutlet weak var c: UIButton!
@@ -41,6 +41,7 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer13 : AVAudioPlayer?
     var audioPlayer14 : AVAudioPlayer?
     var modeaudio : AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
@@ -52,140 +53,114 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
             let url = NSURL.fileURL(withPath: soundURL)
             do{
                 try audioPlayer = AVAudioPlayer(contentsOf: url as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL2 = Bundle.main.path(forResource: "D5", ofType: "mp3"){
-                  let url2 = NSURL.fileURL(withPath: soundURL2)
-                  do{
-                      try audioPlayer2 = AVAudioPlayer(contentsOf: url2 as URL)
-                          }catch {
-                                       print("there was some error.")
-                          }
-              }
+            let url2 = NSURL.fileURL(withPath: soundURL2)
+            do{
+                try audioPlayer2 = AVAudioPlayer(contentsOf: url2 as URL)
+            }catch {
+                print("there was some error.")
+            }
+        }
         if let soundURL3 = Bundle.main.path(forResource: "E5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL3)
             do{
                 try audioPlayer3 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL4 = Bundle.main.path(forResource: "F5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL4)
             do{
                 try audioPlayer4 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL5 = Bundle.main.path(forResource: "G5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL5)
             do{
                 try audioPlayer5 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL6 = Bundle.main.path(forResource: "A5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL6)
             do{
                 try audioPlayer6 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL7 = Bundle.main.path(forResource: "B5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL7)
             do{
                 try audioPlayer7 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL8 = Bundle.main.path(forResource: "C6", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL8)
             do{
                 try audioPlayer8 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL9 = Bundle.main.path(forResource: "C#5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL9)
             do{
                 try audioPlayer9 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL10 = Bundle.main.path(forResource: "D#5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL10)
             do{
                 try audioPlayer10 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL11 = Bundle.main.path(forResource: "F#5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL11)
             do{
                 try audioPlayer11 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL12 = Bundle.main.path(forResource: "G#5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL12)
             do{
                 try audioPlayer12 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL13 = Bundle.main.path(forResource: "A#5", ofType: "mp3"){
             let url2 = NSURL.fileURL(withPath: soundURL13)
             do{
                 try audioPlayer13 = AVAudioPlayer(contentsOf: url2 as URL)
-                    }catch {
-                                 print("there was some error.")
-                    }
+            }catch {
+                print("there was some error.")
+            }
         }
         if let soundURL14 = Bundle.main.path(forResource: "C#6", ofType: "mp3"){
-                   let url2 = NSURL.fileURL(withPath: soundURL14)
-                   do{
-                       try audioPlayer14 = AVAudioPlayer(contentsOf: url2 as URL)
-                           }catch {
-                                        print("there was some error.")
-                           }
-               }
-    }
-    @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
-           print("TAPPED")
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let vs = storyboard.instantiateViewController(identifier: "LearnViewController")
-           let next = vs as! LearnViewController
-            next.modalPresentationStyle = .fullScreen
-           self.present(next, animated: true, completion: nil)
-       }
-    
-    func vibrate() {
-        AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate) {
-            //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            let url2 = NSURL.fileURL(withPath: soundURL14)
+            do{
+                try audioPlayer14 = AVAudioPlayer(contentsOf: url2 as URL)
+            }catch {
+                print("there was some error.")
+            }
         }
-    }
-    func playModeAudio() {
-        print("playAudio begin!!!")
-       if let soundURL = Bundle.main.path(forResource: "pianomode", ofType: "mp3"){
-           let url = NSURL.fileURL(withPath: soundURL)
-           do{
-               try modeaudio = AVAudioPlayer(contentsOf: url as URL)
-                   }catch {
-                                print("there was some error.")
-        }
-       }
-        modeaudio?.play()
     }
     
     @IBAction func v1(_ sender: Any) {
@@ -232,5 +207,26 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer14?.play()
     }
     
+    func playModeAudio() {
+        //print("playAudio begin!!!")
+        if let soundURL = Bundle.main.path(forResource: "pianomode", ofType: "mp3"){
+            let url = NSURL.fileURL(withPath: soundURL)
+            do{
+                try modeaudio = AVAudioPlayer(contentsOf: url as URL)
+            }catch {
+                print("there was some error.")
+            }
+        }
+        modeaudio?.play()
+    }
+    
+    @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
+        //print("TAPPED")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vs = storyboard.instantiateViewController(identifier: "LearnViewController")
+        let next = vs as! LearnViewController
+        next.modalPresentationStyle = .fullScreen
+        self.present(next, animated: true, completion: nil)
+    }
 }
 

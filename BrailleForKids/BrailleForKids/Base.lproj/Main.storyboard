@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="734.78260869565224" y="856.47321428571422"/>
         </scene>
-        <!--Quiz Mode View Controller-->
+        <!--QuizViewController-->
         <scene sceneID="vgg-5G-w8O">
             <objects>
-                <viewController storyboardIdentifier="quizMode" id="x9H-PN-AGB" customClass="quizModeViewController" customModule="BrailleForKids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizViewController" title="QuizViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x9H-PN-AGB" customClass="quizModeViewController" customModule="BrailleForKids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Fr-mf-qoy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,15 +267,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BVo-us-GHw"/>
                     </view>
+                    <connections>
+                        <outlet property="cell1" destination="cXw-8e-ZCM" id="SZv-bU-aEF"/>
+                        <outlet property="cell2" destination="EI9-uF-ZW0" id="R9Y-is-Lo3"/>
+                        <outlet property="cell3" destination="zYp-Tw-xUP" id="qBl-X3-3UO"/>
+                        <outlet property="cell4" destination="xZr-7Y-oNY" id="bli-pI-4GA"/>
+                        <outlet property="cell5" destination="hCg-1O-PAe" id="KfZ-cf-lH3"/>
+                        <outlet property="cell6" destination="enU-Jw-b22" id="K5X-df-MLz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI4-gm-I4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1769.5652173913045" y="841.74107142857144"/>
         </scene>
-        <!--Piano View Controller-->
+        <!--PianoViewController-->
         <scene sceneID="94E-Ca-deR">
             <objects>
-                <viewController storyboardIdentifier="PianoViewController" id="A3Y-LK-7Dc" customClass="PianoViewController" customModule="BrailleForKids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PianoViewController" title="PianoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A3Y-LK-7Dc" customClass="PianoViewController" customModule="BrailleForKids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NCx-H4-ml4"/>
                         <viewControllerLayoutGuide type="bottom" id="eVb-eG-A2N"/>
