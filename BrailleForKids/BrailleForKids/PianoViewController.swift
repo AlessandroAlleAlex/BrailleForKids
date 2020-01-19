@@ -40,12 +40,14 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer12 : AVAudioPlayer?
     var audioPlayer13 : AVAudioPlayer?
     var audioPlayer14 : AVAudioPlayer?
-    
+    var modeaudio : AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
-//               tap.numberOfTapsRequired = 3
-//        self.view.addGestureRecognizer(tap)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
+        tap.numberOfTapsRequired = 3
+        self.view.addGestureRecognizer(tap)
+        playModeAudio()
+        
         if let soundURL = Bundle.main.path(forResource: "C5", ofType: "mp3"){
             let url = NSURL.fileURL(withPath: soundURL)
             do{
@@ -162,8 +164,9 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
            print("TAPPED")
            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let vs = storyboard.instantiateViewController(identifier: "PianoViewController")
-           let next = vs as! PianoViewController
+           let vs = storyboard.instantiateViewController(identifier: "LearnViewController")
+           let next = vs as! LearnViewController
+            next.modalPresentationStyle = .fullScreen
            self.present(next, animated: true, completion: nil)
        }
     
@@ -171,6 +174,18 @@ class PianoViewController: UIViewController, AVAudioPlayerDelegate {
         AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate) {
             //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
         }
+    }
+    func playModeAudio() {
+        print("playAudio begin!!!")
+       if let soundURL = Bundle.main.path(forResource: "pianomode", ofType: "mp3"){
+           let url = NSURL.fileURL(withPath: soundURL)
+           do{
+               try modeaudio = AVAudioPlayer(contentsOf: url as URL)
+                   }catch {
+                                print("there was some error.")
+        }
+       }
+        modeaudio?.play()
     }
     
     @IBAction func v1(_ sender: Any) {

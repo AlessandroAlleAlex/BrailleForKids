@@ -43,6 +43,10 @@
 		C559EFD723656E3700F2EAA0 /* E5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C559EFD123656E3600F2EAA0 /* E5.mp3 */; };
 		C559EFD823656E3700F2EAA0 /* G5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C559EFD223656E3700F2EAA0 /* G5.mp3 */; };
 		C559EFD923656E3700F2EAA0 /* B5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C559EFD323656E3700F2EAA0 /* B5.mp3 */; };
+		C5F9EA7E23D4411700F85C3A /* SMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EA7D23D4411700F85C3A /* SMSViewController.swift */; };
+		C5F9EA8223D4428000F85C3A /* pianomode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5F9EA7F23D4428000F85C3A /* pianomode.mp3 */; };
+		C5F9EA8323D4428000F85C3A /* quizmode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5F9EA8023D4428000F85C3A /* quizmode.mp3 */; };
+		C5F9EA8423D4428000F85C3A /* learnmode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5F9EA8123D4428000F85C3A /* learnmode.mp3 */; };
 		D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B52F2363F52000262BA9 /* AppDelegate.swift */; };
 		D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5312363F52000262BA9 /* SceneDelegate.swift */; };
 		D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B5332363F52000262BA9 /* ViewController.swift */; };
@@ -89,6 +93,10 @@
 		C559EFD123656E3600F2EAA0 /* E5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E5.mp3; sourceTree = "<group>"; };
 		C559EFD223656E3700F2EAA0 /* G5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G5.mp3; sourceTree = "<group>"; };
 		C559EFD323656E3700F2EAA0 /* B5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = B5.mp3; sourceTree = "<group>"; };
+		C5F9EA7D23D4411700F85C3A /* SMSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSViewController.swift; sourceTree = "<group>"; };
+		C5F9EA7F23D4428000F85C3A /* pianomode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pianomode.mp3; sourceTree = "<group>"; };
+		C5F9EA8023D4428000F85C3A /* quizmode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quizmode.mp3; sourceTree = "<group>"; };
+		C5F9EA8123D4428000F85C3A /* learnmode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = learnmode.mp3; sourceTree = "<group>"; };
 		D2B3B52C2363F52000262BA9 /* BrailleForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B52F2363F52000262BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B3B5312363F52000262BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +123,9 @@
 		AD0B6BFC23D3BA85002ED56D /* AudioPiano */ = {
 			isa = PBXGroup;
 			children = (
+				C5F9EA8123D4428000F85C3A /* learnmode.mp3 */,
+				C5F9EA7F23D4428000F85C3A /* pianomode.mp3 */,
+				C5F9EA8023D4428000F85C3A /* quizmode.mp3 */,
 				C559EFD323656E3700F2EAA0 /* B5.mp3 */,
 				C559EFD123656E3600F2EAA0 /* E5.mp3 */,
 				C559EFCE23656E3600F2EAA0 /* F#5.mp3 */,
@@ -184,6 +195,7 @@
 		D2B3B52E2363F52000262BA9 /* BrailleForKids */ = {
 			isa = PBXGroup;
 			children = (
+				C5F9EA7D23D4411700F85C3A /* SMSViewController.swift */,
 				AD0B6BFC23D3BA85002ED56D /* AudioPiano */,
 				AD0B6BFD23D3BACC002ED56D /* AudioAlphabet */,
 				D2B3B52F2363F52000262BA9 /* AppDelegate.swift */,
@@ -261,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F9EA8323D4428000F85C3A /* quizmode.mp3 in Resources */,
 				C559EFD823656E3700F2EAA0 /* G5.mp3 in Resources */,
 				C559EFC723656E2A00F2EAA0 /* C#6.mp3 in Resources */,
 				C559EFC623656E2A00F2EAA0 /* C5.mp3 in Resources */,
@@ -290,9 +303,11 @@
 				ADAB8A43236505D100889816 /* alphabetJ.mp3 in Resources */,
 				ADAB8A44236505D100889816 /* alphabetD.mp3 in Resources */,
 				C559EFCD23656E2A00F2EAA0 /* D5.mp3 in Resources */,
+				C5F9EA8223D4428000F85C3A /* pianomode.mp3 in Resources */,
 				ADAB8A46236505D100889816 /* alphabetM.mp3 in Resources */,
 				ADAB8A3F236505D100889816 /* alphabetN.mp3 in Resources */,
 				ADAB8A45236505D100889816 /* alphabetF.mp3 in Resources */,
+				C5F9EA8423D4428000F85C3A /* learnmode.mp3 in Resources */,
 				D2B3B5372363F52000262BA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +327,7 @@
 				D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */,
 				AD0B6C0123D3D7E4002ED56D /* Constants.swift in Sources */,
 				D2B3B5442363FA7500262BA9 /* LearnVC.swift in Sources */,
+				C5F9EA7E23D4411700F85C3A /* SMSViewController.swift in Sources */,
 				ADAB8A4B2365080800889816 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

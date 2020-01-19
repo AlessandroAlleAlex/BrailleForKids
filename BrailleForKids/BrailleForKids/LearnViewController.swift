@@ -18,6 +18,7 @@ class LearnViewController: UIViewController {
     var touchedCells: Set<Int> = []
     var curBraille: Braille = Braille()
     var audioPlayer: AVAudioPlayer = AVAudioPlayer()
+    var audioPlayer2: AVAudioPlayer?
     
     @IBOutlet weak var BrailleCell: UIImageView!
     @IBOutlet weak var cell1: UIImageView!
@@ -33,6 +34,30 @@ class LearnViewController: UIViewController {
     override func viewDidLoad() {
         self.setRandLetter()
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedbyUser(_:)))
+         tap.numberOfTapsRequired = 3
+         self.view.addGestureRecognizer(tap)
+        playModeAudio()
+    }
+    @objc func tappedbyUser(_ gesture:UISwipeGestureRecognizer){
+        print("TAPPED")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vs = storyboard.instantiateViewController(identifier: "PianoViewController")
+        let next = vs as! PianoViewController
+        next.modalPresentationStyle = .fullScreen
+        self.present(next, animated: true, completion: nil)
+    }
+    func playModeAudio() {
+        print("playAudio begin!!!")
+       if let soundURL = Bundle.main.path(forResource: "learnmode", ofType: "mp3"){
+           let url = NSURL.fileURL(withPath: soundURL)
+           do{
+               try audioPlayer2 = AVAudioPlayer(contentsOf: url as URL)
+                   }catch {
+                                print("there was some error.")
+        }
+       }
+        audioPlayer2?.play()
     }
     
     /**
@@ -153,9 +178,6 @@ class LearnViewController: UIViewController {
         }
     }
     
-    /**
-     
-     */
     func checkInput() {
         if (curBraille.isAllPressed()) {
             playAudio()
