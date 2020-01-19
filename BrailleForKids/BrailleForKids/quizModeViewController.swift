@@ -86,28 +86,28 @@ class quizModeViewController: UIViewController, SFSpeechRecognizerDelegate {
             else if (cell3.frame).contains(point) {
                 curBraille.cellFlags[2] = true
                 if (Array(code)[2] == "1") {
-                    print("in cell3")
+                    //print("in cell3")
                     UIDevice.vibrate()
                 }
             }
             else if (cell4.frame).contains(point) {
                 curBraille.cellFlags[3] = true
                 if (Array(code)[3] == "1") {
-                    print("in cell4")
+                    //print("in cell4")
                     UIDevice.vibrate()
                 }
             }
             else if (cell5.frame).contains(point) {
                 curBraille.cellFlags[4] = true
                 if (Array(code)[4] == "1") {
-                    print("in cell5")
+                    //print("in cell5")
                     UIDevice.vibrate()
                 }
             }
             else if (cell6.frame).contains(point) {
                 curBraille.cellFlags[5] = true
                 if (Array(code)[5] == "1") {
-                    print("in cell6")
+                    //print("in cell6")
                     UIDevice.vibrate()
                 }
             }
