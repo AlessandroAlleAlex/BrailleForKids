@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A3Y-LK-7Dc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mGW-Gk-7n5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -107,9 +107,44 @@
                     <view key="view" contentMode="scaleToFill" id="hNg-jp-vCH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiY-e6-R4K">
+                                <rect key="frame" x="138.5" y="425" width="137" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Start / Stop"/>
+                                <connections>
+                                    <action selector="startStopBtn" destination="mGW-Gk-7n5" eventType="touchUpInside" id="FIc-yq-6eX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say something..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHT-Iv-hYl">
+                                <rect key="frame" x="0.0" y="110" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Recognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVA-ra-CIv">
+                                <rect key="frame" x="0.0" y="54" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pHT-Iv-hYl" firstAttribute="top" secondItem="KVA-ra-CIv" secondAttribute="bottom" constant="20" id="MUI-Uu-la3"/>
+                            <constraint firstItem="hLZ-xq-Fhg" firstAttribute="trailing" secondItem="KVA-ra-CIv" secondAttribute="trailing" id="O38-jY-FFc"/>
+                            <constraint firstItem="jiY-e6-R4K" firstAttribute="centerY" secondItem="hNg-jp-vCH" secondAttribute="centerY" id="W0V-Yi-gUh"/>
+                            <constraint firstItem="KVA-ra-CIv" firstAttribute="top" secondItem="hLZ-xq-Fhg" secondAttribute="top" constant="10" id="ch0-vv-pBR"/>
+                            <constraint firstItem="jiY-e6-R4K" firstAttribute="centerX" secondItem="hNg-jp-vCH" secondAttribute="centerX" id="d2K-eu-dIW"/>
+                            <constraint firstItem="hLZ-xq-Fhg" firstAttribute="trailing" secondItem="pHT-Iv-hYl" secondAttribute="trailing" id="fC1-lJ-1vw"/>
+                            <constraint firstItem="KVA-ra-CIv" firstAttribute="leading" secondItem="hLZ-xq-Fhg" secondAttribute="leading" id="lKc-bn-a18"/>
+                            <constraint firstItem="pHT-Iv-hYl" firstAttribute="leading" secondItem="hLZ-xq-Fhg" secondAttribute="leading" id="sbb-CI-lYz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hLZ-xq-Fhg"/>
                     </view>
+                    <connections>
+                        <outlet property="transcribeLabel" destination="pHT-Iv-hYl" id="rGF-oc-1Wp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U93-E7-iHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +169,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="g3E:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="vuf-VS-a1j"/>
+                                    <action selector="v5:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="od7-zJ-4ba"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deR-m7-jLG">
@@ -144,7 +179,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="a3F:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="RJ8-FP-iJk"/>
+                                    <action selector="v6:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="Aza-M5-bxx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-H0-ad4">
@@ -154,7 +189,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="h3G:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="zqf-rp-vXk"/>
+                                    <action selector="v7:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="enm-os-RIT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-Uu-RZh">
@@ -164,7 +199,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="c4H:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="XSK-gU-jUz"/>
+                                    <action selector="v8:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="h5k-rm-mzt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqi-QW-9yP">
@@ -174,7 +209,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="d3B:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="dIh-dM-8C9"/>
+                                    <action selector="v2:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="9IE-pZ-YkK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-ny-OSB">
@@ -184,7 +219,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="e4C:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="Ssf-kp-uwn"/>
+                                    <action selector="v3:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="wVe-9D-Uuv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0l-Hz-AL0">
@@ -194,7 +229,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="c3A:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="I4K-4d-lnu"/>
+                                    <action selector="v1:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="rPB-PN-c48"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-Jw-1uC">
@@ -204,7 +239,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyWhitePressed"/>
                                 <connections>
-                                    <action selector="f3D:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="P4o-2a-cLq"/>
+                                    <action selector="v4:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="uFk-sf-JlK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-mM-SzZ">
@@ -214,7 +249,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyBlackHalfPressed"/>
                                 <connections>
-                                    <action selector="cis4N:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="fG8-RZ-wdT"/>
+                                    <action selector="c6:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="R9U-rd-YAh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixz-CD-m2o">
@@ -224,7 +259,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyBlackPressed"/>
                                 <connections>
-                                    <action selector="cis3I:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="vhH-qY-Flo"/>
+                                    <action selector="c1:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="Qoc-6N-bAt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq8-Ou-YmU">
@@ -234,7 +269,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyBlackPressed"/>
                                 <connections>
-                                    <action selector="cis4J:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="agi-yb-3Br"/>
+                                    <action selector="c2:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="t59-Rl-qEQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jem-R4-AfK">
@@ -244,7 +279,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyBlackPressed"/>
                                 <connections>
-                                    <action selector="fis3k:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="1Jq-dH-209"/>
+                                    <action selector="c3:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="7vg-qr-IcM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXk-sh-z59">
@@ -254,7 +289,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyBlackPressed"/>
                                 <connections>
-                                    <action selector="As3M:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="aW5-iK-PPR"/>
+                                    <action selector="c5:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="tpO-7j-q7T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpQ-RJ-G3B">
@@ -264,7 +299,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="KeyBlackPressed"/>
                                 <connections>
-                                    <action selector="gis3L:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="qw4-5R-oxe"/>
+                                    <action selector="c4:" destination="A3Y-LK-7Dc" eventType="touchUpInside" id="xf7-NJ-2wi"/>
                                 </connections>
                             </button>
                         </subviews>
