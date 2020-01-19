@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0B6C0123D3D7E4002ED56D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B6C0023D3D7E4002ED56D /* Constants.swift */; };
+		AD0B6C0323D3D878002ED56D /* SpeechRegVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B6C0223D3D878002ED56D /* SpeechRegVC.swift */; };
+		AD0B6C0523D3D9C4002ED56D /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B6C0423D3D9C4002ED56D /* LearnViewController.swift */; };
 		ADAB8A3B236505D100889816 /* alphabetI.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADAB8A2C236505D000889816 /* alphabetI.mp3 */; };
 		ADAB8A3C236505D100889816 /* alphabetO.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADAB8A2D236505D000889816 /* alphabetO.mp3 */; };
 		ADAB8A3D236505D100889816 /* alphabetE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADAB8A2E236505D000889816 /* alphabetE.mp3 */; };
@@ -50,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD0B6C0023D3D7E4002ED56D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AD0B6C0223D3D878002ED56D /* SpeechRegVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRegVC.swift; sourceTree = "<group>"; };
+		AD0B6C0423D3D9C4002ED56D /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		ADAB8A2C236505D000889816 /* alphabetI.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alphabetI.mp3; sourceTree = "<group>"; };
 		ADAB8A2D236505D000889816 /* alphabetO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alphabetO.mp3; sourceTree = "<group>"; };
 		ADAB8A2E236505D000889816 /* alphabetE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alphabetE.mp3; sourceTree = "<group>"; };
@@ -181,6 +187,9 @@
 				AD0B6BFC23D3BA85002ED56D /* AudioPiano */,
 				AD0B6BFD23D3BACC002ED56D /* AudioAlphabet */,
 				D2B3B52F2363F52000262BA9 /* AppDelegate.swift */,
+				AD0B6C0223D3D878002ED56D /* SpeechRegVC.swift */,
+				AD0B6C0423D3D9C4002ED56D /* LearnViewController.swift */,
+				AD0B6C0023D3D7E4002ED56D /* Constants.swift */,
 				D2B3B5312363F52000262BA9 /* SceneDelegate.swift */,
 				D2B3B5332363F52000262BA9 /* ViewController.swift */,
 				D2B3B5432363FA7500262BA9 /* LearnVC.swift */,
@@ -297,8 +306,11 @@
 			files = (
 				D2B3B5342363F52000262BA9 /* ViewController.swift in Sources */,
 				C555CEBC23640604009973FD /* PianoViewController.swift in Sources */,
+				AD0B6C0523D3D9C4002ED56D /* LearnViewController.swift in Sources */,
 				D2B3B5302363F52000262BA9 /* AppDelegate.swift in Sources */,
+				AD0B6C0323D3D878002ED56D /* SpeechRegVC.swift in Sources */,
 				D2B3B5322363F52000262BA9 /* SceneDelegate.swift in Sources */,
+				AD0B6C0123D3D7E4002ED56D /* Constants.swift in Sources */,
 				D2B3B5442363FA7500262BA9 /* LearnVC.swift in Sources */,
 				ADAB8A4B2365080800889816 /* TextViewController.swift in Sources */,
 			);
@@ -445,13 +457,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5H53HY9PQV;
+				DEVELOPMENT_TEAM = VS9S27J65P;
 				INFOPLIST_FILE = BrailleForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,13 +475,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5H53HY9PQV;
+				DEVELOPMENT_TEAM = VS9S27J65P;
 				INFOPLIST_FILE = BrailleForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alessandroliu.BrailleForKids.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
